@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "ds.energymonitoring";
+option java_outer_classname = "EnergyMonitoringImpl";
+
+package EnergyMonitoring;
+
+
+//Service Definition
+service EnergyMonitoring{
+	rpc GetEnergyUsage(GetEnergyUsageRequest) returns (GetEnergyUsageResponse){
+
+	}
+
+	rpc GetEnergyUsageBySource(UsageBySourceRequest) returns (stream UsageBySourceResponse){
+
+	}
+
+	rpc GetEnergyUsageHistory(GetEnergyUsageHistoryRequest) returns (stream EnergyUsageHistoryData){
+
+	}
+}
+//Messages Definitions
+message GetEnergyUsageRequest{
+	string device_id = 1;//specifies the device name and identification
+	int64 start_time = 2;
+	int64 end_time = 3;
+	}
+
+message GetEnergyUsageResponse{
+	float total_energy_usage = 1;
+	float average_power_consumption = 2;
+}
+
+message UsageBySourceRequest{
+	string source_id = 1;
+	int64 start_time = 2;
+	int64 end_time = 3;
+}
+
+message UsageBySourceResponse{
+	float energy_usage = 1;
+}
+
+message GetEnergyUsageHistoryRequest{
+	string device_id = 1;
+}
+message EnergyUsageHistoryData{
+	int64 date_time = 1;
+	float energy_usage = 2;
+
+}

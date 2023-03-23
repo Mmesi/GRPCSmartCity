@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "ds.applicationoptimization";
+option java_outer_classname = "ApplicationOptimizationImpl";
+
+package ApplicationOptimization;
+
+//Service Definition
+service ApplicationOptimization{
+	rpc SetApplianceMode(SetApplianceModeRequest) returns (SetApplianceModeResponse){
+
+	}
+	rpc SetApplianceLimit(SetApplianceLimitRequest) returns (SetApplianceLimitResponse){
+
+	}
+	rpc SetApplianceSchedule(stream SetApplianceScheduleRequest) returns (stream SetApplianceScheduleResponse){
+
+	}
+}
+
+//Messages Definition
+
+message SetApplianceModeRequest{
+	string appliance_id = 1;
+	string mode = 2;
+	string location = 3;
+}
+
+message SetApplianceModeResponse{
+	bool status = 1;
+	string message = 2;
+}
+message SetApplianceLimitRequest{
+	string applianceID = 1;
+	float limit = 2;
+	}
+message SetApplianceLimitResponse{
+	bool status = 1;
+	string message = 2;
+}
+message SetApplianceScheduleRequest{
+	string appliance_id = 1;
+	int64 start_time = 2;
+	int64 end_time = 3;
+}
+message SetApplianceScheduleResponse{
+	string message =1;
+}

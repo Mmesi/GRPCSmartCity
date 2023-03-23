@@ -1,0 +1,1063 @@
+2023-03-23 14:56:15,639 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-03-23 15:06:52,486 [Worker-10: Creating project "EnergyMonitoring"] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: class.grpc.energymonitoring:EnergyMonitoring:0.0.1-SNAPSHOT @ C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\pom.xml.
+2023-03-23 15:06:54,052 [Worker-10: Creating project "EnergyMonitoring"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /EnergyMonitoring/src/main/java
+2023-03-23 15:06:54,056 [Worker-10: Creating project "EnergyMonitoring"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /EnergyMonitoring/src/main/resources
+2023-03-23 15:06:54,057 [Worker-10: Creating project "EnergyMonitoring"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /EnergyMonitoring/src/test/java
+2023-03-23 15:06:54,058 [Worker-10: Creating project "EnergyMonitoring"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /EnergyMonitoring/src/test/resources
+2023-03-23 15:06:57,820 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-03-23 15:06:57,851 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 15:06:57,890 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-03-23 15:06:57,898 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 15:18:09,500 [Worker-18: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: class.grpc.energymonitoring:EnergyMonitoring:0.0.1-SNAPSHOT @ C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\pom.xml.
+2023-03-23 15:18:11,576 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 15:18:12,027 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar8812139176405040671\bin\protoc.exe
+2023-03-23 15:18:12,029 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar16898211122819580445\include
+2023-03-23 15:18:12,078 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 15:18:12,085 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 15:18:12,087 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 15:18:12,089 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 15:18:12,091 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 15:18:12,094 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 15:18:12,099 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 15:18:12,100 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 15:18:12,101 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 15:18:12,105 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 15:18:12,107 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 15:18:12,108 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 15:18:12,469 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 15:18:12,469 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources
+2023-03-23 15:18:12,469 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 15:18:12,469 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar16898211122819580445\include
+2023-03-23 15:18:12,469 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 15:18:12,469 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 15:18:12,469 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 15:18:12,470 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 15:18:12,637 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 15:18:12,638 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 15:18:12,795 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 15:18:12,799 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 15:18:12,808 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 15:18:12,808 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 15:18:15,484 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-03-23 15:18:16,260 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: class.grpc.energymonitoring:EnergyMonitoring:0.0.1-SNAPSHOT @ C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\pom.xml.
+2023-03-23 15:18:17,178 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 15:18:17,817 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar5956530284577670057\bin\protoc.exe
+2023-03-23 15:18:17,819 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar17708674545828019644\include
+2023-03-23 15:18:17,920 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 15:18:17,925 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 15:18:17,926 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 15:18:17,928 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 15:18:17,930 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 15:18:17,931 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 15:18:17,932 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 15:18:17,934 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 15:18:17,936 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 15:18:17,937 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 15:18:17,939 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 15:18:17,940 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 15:18:18,477 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 15:18:18,477 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources
+2023-03-23 15:18:18,477 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 15:18:18,477 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar17708674545828019644\include
+2023-03-23 15:18:18,477 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 15:18:18,477 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 15:18:18,477 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 15:18:18,478 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 15:18:18,507 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 15:18:18,508 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 15:18:18,699 [Worker-16: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /EnergyMonitoring/src/main/java
+2023-03-23 15:18:18,699 [Worker-16: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /EnergyMonitoring/src/main/resources
+2023-03-23 15:18:18,730 [Worker-16: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /EnergyMonitoring/src/test/java
+2023-03-23 15:18:18,731 [Worker-16: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /EnergyMonitoring/src/test/resources
+2023-03-23 15:18:19,023 [Worker-16: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 1.00 sec, update config takes 2.00 sec 
+2023-03-23 15:18:19,186 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 15:18:19,531 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar7235821455404678517\bin\protoc.exe
+2023-03-23 15:18:19,533 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar4257687734522515138\include
+2023-03-23 15:18:19,608 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 15:18:19,613 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 15:18:19,614 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 15:18:19,615 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 15:18:19,618 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 15:18:19,619 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 15:18:19,620 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 15:18:19,622 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 15:18:19,623 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 15:18:19,624 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 15:18:19,625 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 15:18:19,626 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 15:18:20,419 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 15:18:20,420 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources
+2023-03-23 15:18:20,420 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 15:18:20,420 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar4257687734522515138\include
+2023-03-23 15:18:20,420 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 15:18:20,420 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 15:18:20,420 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 15:18:20,420 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 15:18:20,427 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 15:18:20,427 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 15:18:20,440 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 15:18:20,441 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 15:18:20,443 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 15:18:20,444 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 15:22:11,563 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-03-23 15:22:11,984 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: class.grpc.energymonitoring:EnergyMonitoring:0.0.1-SNAPSHOT @ C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\pom.xml.
+2023-03-23 15:22:12,318 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 15:22:12,881 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar12790812460608933852\bin\protoc.exe
+2023-03-23 15:22:12,883 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar4995846680643446948\include
+2023-03-23 15:22:12,938 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 15:22:12,941 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 15:22:12,943 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 15:22:12,944 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 15:22:12,947 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 15:22:12,948 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 15:22:12,949 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 15:22:12,950 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 15:22:12,952 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 15:22:12,953 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 15:22:12,954 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 15:22:12,956 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 15:22:13,346 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 15:22:13,346 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources
+2023-03-23 15:22:13,346 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 15:22:13,346 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar4995846680643446948\include
+2023-03-23 15:22:13,346 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 15:22:13,347 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 15:22:13,347 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 15:22:13,347 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 15:22:13,375 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 15:22:13,376 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 15:22:13,493 [Worker-15: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /EnergyMonitoring/src/main/java
+2023-03-23 15:22:13,494 [Worker-15: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /EnergyMonitoring/src/main/resources
+2023-03-23 15:22:13,495 [Worker-15: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /EnergyMonitoring/src/test/java
+2023-03-23 15:22:13,496 [Worker-15: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /EnergyMonitoring/src/test/resources
+2023-03-23 15:22:13,616 [Worker-15: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 1.00 sec 
+2023-03-23 15:22:13,734 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 15:22:14,188 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar16709637755595953990\bin\protoc.exe
+2023-03-23 15:22:14,190 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar196087649879550724\include
+2023-03-23 15:22:14,260 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 15:22:14,265 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 15:22:14,266 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 15:22:14,268 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 15:22:14,270 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 15:22:14,271 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 15:22:14,272 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 15:22:14,273 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 15:22:14,275 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 15:22:14,276 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 15:22:14,277 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 15:22:14,278 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 15:22:14,742 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 15:22:14,742 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources
+2023-03-23 15:22:14,742 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 15:22:14,742 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar196087649879550724\include
+2023-03-23 15:22:14,742 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 15:22:14,743 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 15:22:14,743 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 15:22:14,743 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 15:22:14,753 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 15:22:14,753 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 15:22:14,767 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 15:22:14,768 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 15:22:14,773 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 15:22:14,773 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 15:31:05,385 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 15:31:05,970 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar18344846657850175198\bin\protoc.exe
+2023-03-23 15:31:05,971 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar1671691176843151362\include
+2023-03-23 15:31:06,018 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 15:31:06,021 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 15:31:06,022 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 15:31:06,023 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 15:31:06,025 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 15:31:06,027 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 15:31:06,028 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 15:31:06,029 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 15:31:06,030 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 15:31:06,031 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 15:31:06,032 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 15:31:06,034 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 15:31:06,422 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 15:31:06,422 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources
+2023-03-23 15:31:06,422 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 15:31:06,422 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar1671691176843151362\include
+2023-03-23 15:31:06,422 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 15:31:06,422 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 15:31:06,422 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 15:31:06,422 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 15:31:06,433 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources\energymonitoring.proto
+2023-03-23 15:31:06,434 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 15:31:06,434 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources\energymonitoring.proto
+2023-03-23 15:31:06,434 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 15:31:06,437 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 15:31:06,442 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-03-23 15:31:06,458 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 15:31:06,459 [Worker-24: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 15:31:09,113 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 15:31:09,313 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar142826265637502595\bin\protoc.exe
+2023-03-23 15:31:09,315 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar8224430492813947109\include
+2023-03-23 15:31:09,364 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 15:31:09,367 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 15:31:09,368 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 15:31:09,369 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 15:31:09,371 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 15:31:09,372 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 15:31:09,373 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 15:31:09,374 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 15:31:09,375 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 15:31:09,376 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 15:31:09,378 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 15:31:09,380 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 15:31:09,702 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 15:31:09,702 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources
+2023-03-23 15:31:09,702 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 15:31:09,702 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar8224430492813947109\include
+2023-03-23 15:31:09,702 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 15:31:09,702 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 15:31:09,702 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 15:31:09,702 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 15:31:09,709 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources\energymonitoring.proto
+2023-03-23 15:31:09,709 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 15:31:09,710 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources\energymonitoring.proto
+2023-03-23 15:31:09,710 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 15:31:09,712 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 15:31:09,713 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 15:31:09,717 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 15:31:09,718 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 17:13:18,717 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 17:13:19,383 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar16532330133183792806\bin\protoc.exe
+2023-03-23 17:13:19,385 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar16662227728078742553\include
+2023-03-23 17:13:19,443 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 17:13:19,446 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 17:13:19,447 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 17:13:19,449 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 17:13:19,450 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 17:13:19,452 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 17:13:19,453 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 17:13:19,454 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 17:13:19,455 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 17:13:19,456 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 17:13:19,457 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 17:13:19,459 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 17:13:19,830 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 17:13:19,830 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources
+2023-03-23 17:13:19,830 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 17:13:19,830 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar16662227728078742553\include
+2023-03-23 17:13:19,830 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 17:13:19,830 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:13:19,830 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:13:19,831 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 17:13:19,842 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources\energymonitoring.proto
+2023-03-23 17:13:19,843 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:13:19,844 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources\energymonitoring.proto
+2023-03-23 17:13:19,845 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:13:19,849 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 17:13:19,850 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-03-23 17:13:19,858 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 17:13:19,859 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 17:13:50,397 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2023-03-23 17:13:58,959 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149 [606])
+2023-03-23 17:13:58,969 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149
+2023-03-23 17:13:58,970 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\aether-connector-okhttp-0.17.8.jar
+2023-03-23 17:13:58,971 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\commons-cli-1.4.jar
+2023-03-23 17:13:58,971 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\commons-io-2.6.jar
+2023-03-23 17:13:58,972 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\commons-lang3-3.8.1.jar
+2023-03-23 17:13:58,972 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\guice-4.2.2-no_aop.jar
+2023-03-23 17:13:58,972 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\jansi-2.4.0.jar
+2023-03-23 17:13:58,973 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-artifact-3.8.6.jar
+2023-03-23 17:13:58,973 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-builder-support-3.8.6.jar
+2023-03-23 17:13:58,974 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-compat-3.8.6.jar
+2023-03-23 17:13:58,974 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-core-3.8.6.jar
+2023-03-23 17:13:58,974 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-embedder-3.8.6.jar
+2023-03-23 17:13:58,975 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-model-3.8.6.jar
+2023-03-23 17:13:58,975 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-model-builder-3.8.6.jar
+2023-03-23 17:13:58,976 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-plugin-api-3.8.6.jar
+2023-03-23 17:13:58,976 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-repository-metadata-3.8.6.jar
+2023-03-23 17:13:58,977 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-api-1.6.3.jar
+2023-03-23 17:13:58,977 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-connector-basic-1.6.3.jar
+2023-03-23 17:13:58,978 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-impl-1.6.3.jar
+2023-03-23 17:13:58,978 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-provider-3.8.6.jar
+2023-03-23 17:13:58,978 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-spi-1.6.3.jar
+2023-03-23 17:13:58,979 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-transport-wagon-1.6.3.jar
+2023-03-23 17:13:58,979 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-util-1.6.3.jar
+2023-03-23 17:13:58,980 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-settings-3.8.6.jar
+2023-03-23 17:13:58,980 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-settings-builder-3.8.6.jar
+2023-03-23 17:13:58,981 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-shared-utils-3.3.4.jar
+2023-03-23 17:13:58,981 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\okhttp-3.14.1.jar
+2023-03-23 17:13:58,981 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\okio-1.17.3.jar
+2023-03-23 17:13:58,982 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\org.eclipse.sisu.inject-0.3.5.jar
+2023-03-23 17:13:58,982 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\org.eclipse.sisu.plexus-0.3.5.jar
+2023-03-23 17:13:58,983 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-build-api-0.0.7.jar
+2023-03-23 17:13:58,984 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-cipher-2.0.jar
+2023-03-23 17:13:58,984 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-classworlds-2.6.0.jar
+2023-03-23 17:13:58,985 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-component-annotations-2.1.0.jar
+2023-03-23 17:13:58,986 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-interpolation-1.26.jar
+2023-03-23 17:13:58,986 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-sec-dispatcher-2.0.jar
+2023-03-23 17:13:58,987 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-utils-3.3.1.jar
+2023-03-23 17:13:58,988 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\wagon-file-3.5.1.jar
+2023-03-23 17:13:58,989 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\wagon-provider-api-3.5.1.jar
+2023-03-23 17:13:58,992 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_30.1.0.v20221112-0806 [10])
+2023-03-23 17:13:59,003 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\com.google.guava_30.1.0.v20221112-0806.jar
+2023-03-23 17:13:59,004 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_1.7.36 [918])
+2023-03-23 17:13:59,005 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\slf4j.api_1.7.36.jar
+2023-03-23 17:13:59,005 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.inject_1.0.0.v20220405-0441 [32])
+2023-03-23 17:13:59,007 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\javax.inject_1.0.0.v20220405-0441.jar
+2023-03-23 17:13:59,008 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.annotation_1.3.5.v20221112-0806 [30])
+2023-03-23 17:13:59,009 [Worker-32: Launching EnergyMonitoring] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\eclipse\plugins\javax.annotation_1.3.5.v20221112-0806.jar
+2023-03-23 17:13:59,015 [Worker-32: Launching EnergyMonitoring] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring":
+2023-03-23 17:13:59,024 [Worker-32: Launching EnergyMonitoring] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always 
+2023-03-23 17:13:59,728 [Worker-43: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: class.grpc.energymonitoring:EnergyMonitoring:0.0.1-SNAPSHOT @ C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\pom.xml.
+2023-03-23 17:14:00,149 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 17:14:00,536 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar6058469873428320031\bin\protoc.exe
+2023-03-23 17:14:00,537 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar2959585911159788952\include
+2023-03-23 17:14:00,606 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 17:14:00,656 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 17:14:00,657 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 17:14:00,659 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 17:14:00,661 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 17:14:00,662 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 17:14:00,663 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 17:14:00,664 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 17:14:00,665 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 17:14:00,666 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 17:14:00,667 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 17:14:00,669 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 17:14:01,340 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 17:14:01,340 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources
+2023-03-23 17:14:01,340 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 17:14:01,340 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar2959585911159788952\include
+2023-03-23 17:14:01,340 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 17:14:01,340 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:14:01,340 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:14:01,341 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 17:14:01,385 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources\energymonitoring.proto
+2023-03-23 17:14:01,385 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:14:01,387 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources\energymonitoring.proto
+2023-03-23 17:14:01,387 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:14:01,595 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 17:14:01,598 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 17:14:01,601 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 17:14:01,602 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 17:14:48,681 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 17:14:49,716 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar2407566247801670217\bin\protoc.exe
+2023-03-23 17:14:49,719 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar16447283105345510865\include
+2023-03-23 17:14:49,793 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 17:14:49,795 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 17:14:49,798 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 17:14:49,800 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 17:14:49,806 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 17:14:49,807 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 17:14:49,808 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 17:14:49,809 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 17:14:49,810 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 17:14:49,811 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 17:14:49,812 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 17:14:49,813 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 17:14:50,238 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 17:14:50,238 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources
+2023-03-23 17:14:50,238 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 17:14:50,238 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar16447283105345510865\include
+2023-03-23 17:14:50,238 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 17:14:50,238 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:14:50,238 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:14:50,238 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 17:14:50,247 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources\energymonitoring.proto
+2023-03-23 17:14:50,247 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:14:50,247 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources\energymonitoring.proto
+2023-03-23 17:14:50,248 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:14:50,250 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 17:14:50,253 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-03-23 17:14:50,262 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 17:14:50,263 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 17:15:11,875 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 17:15:12,028 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar8130668341986782028\bin\protoc.exe
+2023-03-23 17:15:12,029 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar16525685905206446607\include
+2023-03-23 17:15:12,096 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 17:15:12,099 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 17:15:12,100 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 17:15:12,101 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 17:15:12,103 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 17:15:12,105 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 17:15:12,106 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 17:15:12,107 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 17:15:12,109 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 17:15:12,110 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 17:15:12,111 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 17:15:12,113 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 17:15:12,701 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 17:15:12,701 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources
+2023-03-23 17:15:12,701 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 17:15:12,701 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar16525685905206446607\include
+2023-03-23 17:15:12,701 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 17:15:12,701 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:15:12,701 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:15:12,702 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 17:15:12,712 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources\energymonitoring.proto
+2023-03-23 17:15:12,712 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:15:12,712 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\EnergyMonitoring\src\main\resources\energymonitoring.proto
+2023-03-23 17:15:12,712 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:15:12,714 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 17:15:12,715 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 17:15:12,718 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 17:15:12,719 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 17:20:56,050 [Worker-44: Creating project "LightingSystem"] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: class.grpc.lightingsystem:LightingSystem:0.0.1-SNAPSHOT @ C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\pom.xml.
+2023-03-23 17:20:56,288 [Worker-44: Creating project "LightingSystem"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /LightingSystem/src/main/java
+2023-03-23 17:20:56,289 [Worker-44: Creating project "LightingSystem"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /LightingSystem/src/main/resources
+2023-03-23 17:20:56,290 [Worker-44: Creating project "LightingSystem"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /LightingSystem/src/test/java
+2023-03-23 17:20:56,291 [Worker-44: Creating project "LightingSystem"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /LightingSystem/src/test/resources
+2023-03-23 17:20:56,750 [Worker-44: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-03-23 17:20:56,752 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 17:20:56,757 [Worker-44: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-03-23 17:20:56,758 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 17:21:44,350 [Worker-46: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: class.grpc.lightingsystem:LightingSystem:0.0.1-SNAPSHOT @ C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\pom.xml.
+2023-03-23 17:21:44,569 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 17:21:44,683 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar11039184073872676206\bin\protoc.exe
+2023-03-23 17:21:44,686 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar2284283254007473060\include
+2023-03-23 17:21:44,748 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 17:21:44,751 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 17:21:44,753 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 17:21:44,755 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 17:21:44,756 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 17:21:44,757 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 17:21:44,759 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 17:21:44,760 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 17:21:44,761 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 17:21:44,762 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 17:21:44,763 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 17:21:44,765 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 17:21:45,128 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 17:21:45,128 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources
+2023-03-23 17:21:45,129 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 17:21:45,129 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar2284283254007473060\include
+2023-03-23 17:21:45,129 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 17:21:45,129 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:21:45,129 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:21:45,129 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 17:21:45,139 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:21:45,139 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:21:45,142 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 17:21:45,142 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 17:21:45,143 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 17:21:45,144 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 17:21:45,514 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-03-23 17:21:45,688 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: class.grpc.lightingsystem:LightingSystem:0.0.1-SNAPSHOT @ C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\pom.xml.
+2023-03-23 17:21:46,014 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 17:21:46,408 [Worker-44: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/javax/jmdns/jmdns/3.4.1/jmdns-3.4.1-sources.jar
+2023-03-23 17:21:46,671 [Worker-44: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/javax/jmdns/jmdns/3.4.1/jmdns-3.4.1-sources.jar
+2023-03-23 17:21:46,676 [Worker-44: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for javax.jmdns:jmdns:3.4.1
+2023-03-23 17:21:46,714 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar8882705190774646008\bin\protoc.exe
+2023-03-23 17:21:46,716 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar16669026014734562009\include
+2023-03-23 17:21:46,789 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 17:21:46,792 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 17:21:46,794 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 17:21:46,795 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 17:21:46,797 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 17:21:46,798 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 17:21:46,799 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 17:21:46,800 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 17:21:46,801 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 17:21:46,802 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 17:21:46,804 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 17:21:46,805 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 17:21:47,278 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 17:21:47,279 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources
+2023-03-23 17:21:47,279 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 17:21:47,279 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar16669026014734562009\include
+2023-03-23 17:21:47,279 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 17:21:47,279 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:21:47,279 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:21:47,279 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 17:21:47,287 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:21:47,288 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:21:47,299 [Worker-46: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /LightingSystem/src/main/java
+2023-03-23 17:21:47,299 [Worker-46: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /LightingSystem/src/main/resources
+2023-03-23 17:21:47,319 [Worker-46: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /LightingSystem/src/test/java
+2023-03-23 17:21:47,319 [Worker-46: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /LightingSystem/src/test/resources
+2023-03-23 17:21:47,540 [Worker-46: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 1.00 sec 
+2023-03-23 17:21:47,755 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 17:21:47,985 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar1416912547785014260\bin\protoc.exe
+2023-03-23 17:21:47,986 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar6048393218160410530\include
+2023-03-23 17:21:48,036 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 17:21:48,043 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 17:21:48,044 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 17:21:48,048 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 17:21:48,050 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 17:21:48,051 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 17:21:48,052 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 17:21:48,053 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 17:21:48,054 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 17:21:48,055 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 17:21:48,056 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 17:21:48,057 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 17:21:48,558 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 17:21:48,559 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources
+2023-03-23 17:21:48,559 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 17:21:48,559 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar6048393218160410530\include
+2023-03-23 17:21:48,559 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 17:21:48,559 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:21:48,559 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:21:48,559 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 17:21:48,569 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:21:48,570 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:21:48,572 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 17:21:48,572 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 17:21:48,575 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 17:21:48,575 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 17:22:13,030 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 17:22:13,155 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar5742965485237378731\bin\protoc.exe
+2023-03-23 17:22:13,157 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar1536740258715529723\include
+2023-03-23 17:22:13,208 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 17:22:13,214 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 17:22:13,215 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 17:22:13,217 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 17:22:13,219 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 17:22:13,220 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 17:22:13,221 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 17:22:13,222 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 17:22:13,223 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 17:22:13,224 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 17:22:13,225 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 17:22:13,226 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 17:22:13,568 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 17:22:13,568 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources
+2023-03-23 17:22:13,568 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 17:22:13,568 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar1536740258715529723\include
+2023-03-23 17:22:13,568 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 17:22:13,568 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:22:13,568 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:22:13,568 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 17:22:13,575 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:22:13,575 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:22:13,577 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 17:22:13,578 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 17:22:13,581 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 17:22:13,581 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 17:22:15,168 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 17:22:15,290 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar12674845620224018988\bin\protoc.exe
+2023-03-23 17:22:15,292 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar12158943968596108317\include
+2023-03-23 17:22:15,352 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 17:22:15,359 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 17:22:15,360 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 17:22:15,362 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 17:22:15,363 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 17:22:15,364 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 17:22:15,365 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 17:22:15,366 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 17:22:15,368 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 17:22:15,369 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 17:22:15,370 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 17:22:15,371 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 17:22:15,724 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 17:22:15,724 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources
+2023-03-23 17:22:15,724 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 17:22:15,724 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar12158943968596108317\include
+2023-03-23 17:22:15,724 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 17:22:15,724 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:22:15,724 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:22:15,724 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 17:22:15,732 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:22:15,733 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:22:15,735 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 17:22:15,735 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 17:22:15,739 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 17:22:15,739 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 17:29:25,136 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 17:29:25,261 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar15048855246074163883\bin\protoc.exe
+2023-03-23 17:29:25,263 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar4030335232567896403\include
+2023-03-23 17:29:25,321 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 17:29:25,324 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 17:29:25,362 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 17:29:25,364 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 17:29:25,366 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 17:29:25,368 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 17:29:25,369 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 17:29:25,370 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 17:29:25,371 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 17:29:25,372 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 17:29:25,373 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 17:29:25,373 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 17:29:25,833 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 17:29:25,833 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources
+2023-03-23 17:29:25,833 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 17:29:25,833 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar4030335232567896403\include
+2023-03-23 17:29:25,833 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 17:29:25,833 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:29:25,833 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 17:29:25,833 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 17:29:25,843 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:29:25,843 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 17:29:25,846 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 17:29:25,846 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 17:29:25,849 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 17:29:25,850 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:25:58,872 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 18:25:58,982 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar15145212599562759220\bin\protoc.exe
+2023-03-23 18:25:58,984 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar10912454905627032272\include
+2023-03-23 18:25:59,044 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 18:25:59,047 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 18:25:59,049 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 18:25:59,050 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 18:25:59,052 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 18:25:59,053 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 18:25:59,054 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 18:25:59,055 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 18:25:59,056 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 18:25:59,057 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 18:25:59,059 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 18:25:59,060 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 18:25:59,469 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 18:25:59,469 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources
+2023-03-23 18:25:59,469 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 18:25:59,469 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar10912454905627032272\include
+2023-03-23 18:25:59,469 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 18:25:59,469 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:25:59,469 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:25:59,470 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 18:25:59,481 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:25:59,481 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:25:59,485 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:25:59,486 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:25:59,490 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:25:59,490 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:26:10,128 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2023-03-23 18:26:12,705 [Worker-54: Launching LightingSystem] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem":
+2023-03-23 18:26:12,705 [Worker-54: Launching LightingSystem] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always 
+2023-03-23 18:26:48,728 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 18:26:48,870 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar12896426023642440283\bin\protoc.exe
+2023-03-23 18:26:48,872 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar5973035108261651413\include
+2023-03-23 18:26:48,923 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 18:26:48,925 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 18:26:48,926 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 18:26:48,927 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 18:26:48,932 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 18:26:48,933 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 18:26:48,934 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 18:26:48,935 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 18:26:48,936 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 18:26:48,937 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 18:26:48,938 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 18:26:48,939 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 18:26:49,303 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 18:26:49,303 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources
+2023-03-23 18:26:49,303 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 18:26:49,304 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar5973035108261651413\include
+2023-03-23 18:26:49,304 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 18:26:49,304 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:26:49,304 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:26:49,304 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 18:26:49,314 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:26:49,314 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:26:49,318 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:26:49,319 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:26:49,322 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:26:49,322 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:28:12,135 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 18:28:12,327 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar1586452451943237446\bin\protoc.exe
+2023-03-23 18:28:12,329 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar362800368958712700\include
+2023-03-23 18:28:12,392 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 18:28:12,396 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 18:28:12,397 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 18:28:12,398 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 18:28:12,400 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 18:28:12,401 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 18:28:12,402 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 18:28:12,403 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 18:28:12,404 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 18:28:12,405 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 18:28:12,406 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 18:28:12,407 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 18:28:12,774 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 18:28:12,774 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources
+2023-03-23 18:28:12,774 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 18:28:12,774 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar362800368958712700\include
+2023-03-23 18:28:12,774 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 18:28:12,774 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:28:12,775 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:28:12,775 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 18:28:12,784 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:28:12,784 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:28:12,786 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:28:12,787 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:28:12,790 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:28:12,790 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:28:28,733 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 18:28:28,837 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar8985045327340129300\bin\protoc.exe
+2023-03-23 18:28:28,839 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar7159621584948936326\include
+2023-03-23 18:28:28,897 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 18:28:28,899 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 18:28:28,900 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 18:28:28,901 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 18:28:28,907 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 18:28:28,908 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 18:28:28,909 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 18:28:28,910 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 18:28:28,911 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 18:28:28,913 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 18:28:28,914 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 18:28:28,915 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 18:28:29,339 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 18:28:29,340 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources
+2023-03-23 18:28:29,340 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 18:28:29,340 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar7159621584948936326\include
+2023-03-23 18:28:29,340 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 18:28:29,340 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:28:29,340 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:28:29,340 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 18:28:29,353 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:28:29,354 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:28:29,357 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:28:29,357 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:28:29,360 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:28:29,360 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:28:52,364 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 18:28:52,531 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar17138969805707785086\bin\protoc.exe
+2023-03-23 18:28:52,532 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar16061019375884082299\include
+2023-03-23 18:28:52,601 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 18:28:52,605 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 18:28:52,607 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 18:28:52,608 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 18:28:52,614 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 18:28:52,615 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 18:28:52,615 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 18:28:52,616 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 18:28:52,618 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 18:28:52,619 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 18:28:52,620 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 18:28:52,620 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 18:28:52,968 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 18:28:52,968 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources
+2023-03-23 18:28:52,968 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 18:28:52,968 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar16061019375884082299\include
+2023-03-23 18:28:52,968 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 18:28:52,968 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:28:52,968 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:28:52,968 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 18:28:52,977 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources\lightingsystem.proto
+2023-03-23 18:28:52,977 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:28:52,977 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources\lightingsystem.proto
+2023-03-23 18:28:52,978 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:28:52,980 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:28:52,980 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-03-23 18:28:52,992 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:28:52,993 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:28:59,883 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 18:29:00,014 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar6068052829937634010\bin\protoc.exe
+2023-03-23 18:29:00,016 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar12071864318968816394\include
+2023-03-23 18:29:00,082 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 18:29:00,085 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 18:29:00,086 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 18:29:00,087 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 18:29:00,089 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 18:29:00,090 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 18:29:00,091 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 18:29:00,092 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 18:29:00,093 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 18:29:00,094 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 18:29:00,095 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 18:29:00,096 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 18:29:00,476 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 18:29:00,476 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources
+2023-03-23 18:29:00,476 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 18:29:00,476 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar12071864318968816394\include
+2023-03-23 18:29:00,476 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 18:29:00,476 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:29:00,476 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:29:00,476 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 18:29:00,484 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources\lightingsystem.proto
+2023-03-23 18:29:00,484 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:29:00,485 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources\lightingsystem.proto
+2023-03-23 18:29:00,485 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:29:00,486 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:29:00,487 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-03-23 18:29:00,492 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:29:00,492 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:29:08,336 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 18:29:08,473 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar13941040786457139487\bin\protoc.exe
+2023-03-23 18:29:08,474 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar6250638897672076008\include
+2023-03-23 18:29:08,539 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 18:29:08,543 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 18:29:08,544 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 18:29:08,545 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 18:29:08,546 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 18:29:08,547 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 18:29:08,548 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 18:29:08,549 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 18:29:08,550 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 18:29:08,551 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 18:29:08,552 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 18:29:08,553 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 18:29:08,979 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 18:29:08,980 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources
+2023-03-23 18:29:08,980 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 18:29:08,980 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar6250638897672076008\include
+2023-03-23 18:29:08,980 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 18:29:08,980 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:29:08,980 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:29:08,980 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 18:29:08,993 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources\lightingsystem.proto
+2023-03-23 18:29:08,993 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:29:08,994 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources\lightingsystem.proto
+2023-03-23 18:29:08,994 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:29:08,999 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:29:08,999 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:29:09,004 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:29:09,004 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:29:15,468 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2023-03-23 18:29:18,589 [Worker-54: Launching LightingSystem] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem":
+2023-03-23 18:29:18,589 [Worker-54: Launching LightingSystem] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always 
+2023-03-23 18:30:39,608 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 18:30:39,958 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar11070896447862472033\bin\protoc.exe
+2023-03-23 18:30:39,959 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar1169295594753947943\include
+2023-03-23 18:30:40,037 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 18:30:40,040 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 18:30:40,042 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 18:30:40,044 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 18:30:40,046 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 18:30:40,047 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 18:30:40,048 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 18:30:40,050 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 18:30:40,052 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 18:30:40,052 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 18:30:40,053 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 18:30:40,054 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 18:30:40,648 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 18:30:40,648 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources
+2023-03-23 18:30:40,648 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 18:30:40,648 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar1169295594753947943\include
+2023-03-23 18:30:40,648 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 18:30:40,648 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:30:40,648 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:30:40,648 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 18:30:40,662 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources\lightingsystem.proto
+2023-03-23 18:30:40,662 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:30:40,663 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\LightingSystem\src\main\resources\lightingsystem.proto
+2023-03-23 18:30:40,663 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:30:40,666 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:30:40,667 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-03-23 18:30:40,669 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:30:40,669 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:32:28,516 [Worker-51: Creating project "ApplicationOptimization"] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: class.grpc.applicationoptimization:ApplicationOptimization:0.0.1-SNAPSHOT @ C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\pom.xml.
+2023-03-23 18:32:28,777 [Worker-51: Creating project "ApplicationOptimization"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ApplicationOptimization/src/main/java
+2023-03-23 18:32:28,778 [Worker-51: Creating project "ApplicationOptimization"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ApplicationOptimization/src/main/resources
+2023-03-23 18:32:28,778 [Worker-51: Creating project "ApplicationOptimization"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ApplicationOptimization/src/test/java
+2023-03-23 18:32:28,779 [Worker-51: Creating project "ApplicationOptimization"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ApplicationOptimization/src/test/resources
+2023-03-23 18:32:29,531 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-03-23 18:32:29,533 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:32:29,535 [Worker-51: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-03-23 18:32:29,537 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:34:12,398 [Worker-51: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: class.grpc.applicationoptimization:ApplicationOptimization:0.0.1-SNAPSHOT @ C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\pom.xml.
+2023-03-23 18:34:12,611 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 18:34:12,785 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar11031591230287511556\bin\protoc.exe
+2023-03-23 18:34:12,786 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar3969390831921217722\include
+2023-03-23 18:34:12,859 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 18:34:12,864 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 18:34:12,865 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 18:34:12,875 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 18:34:12,877 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 18:34:12,878 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 18:34:12,879 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 18:34:12,881 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 18:34:12,882 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 18:34:12,882 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 18:34:12,892 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 18:34:12,894 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 18:34:13,341 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 18:34:13,342 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\resources
+2023-03-23 18:34:13,342 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 18:34:13,342 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar3969390831921217722\include
+2023-03-23 18:34:13,342 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 18:34:13,342 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:34:13,342 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:34:13,342 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 18:34:13,354 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:34:13,354 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:34:13,358 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:34:13,359 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:34:13,362 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:34:13,362 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:34:13,443 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-03-23 18:34:13,811 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: class.grpc.applicationoptimization:ApplicationOptimization:0.0.1-SNAPSHOT @ C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\pom.xml.
+2023-03-23 18:34:14,081 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 18:34:14,902 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar3509897830390510989\bin\protoc.exe
+2023-03-23 18:34:14,904 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar15904006521302144569\include
+2023-03-23 18:34:14,990 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 18:34:14,997 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 18:34:14,999 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 18:34:15,000 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 18:34:15,003 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 18:34:15,004 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 18:34:15,004 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 18:34:15,005 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 18:34:15,007 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 18:34:15,008 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 18:34:15,010 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 18:34:15,011 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 18:34:15,611 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 18:34:15,611 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\resources
+2023-03-23 18:34:15,611 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 18:34:15,611 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar15904006521302144569\include
+2023-03-23 18:34:15,611 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 18:34:15,611 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:34:15,611 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:34:15,611 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 18:34:15,624 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:34:15,624 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:34:15,637 [Worker-59: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ApplicationOptimization/src/main/java
+2023-03-23 18:34:15,637 [Worker-59: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ApplicationOptimization/src/main/resources
+2023-03-23 18:34:15,681 [Worker-59: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /ApplicationOptimization/src/test/java
+2023-03-23 18:34:15,681 [Worker-59: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /ApplicationOptimization/src/test/resources
+2023-03-23 18:34:15,910 [Worker-59: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 1.00 sec 
+2023-03-23 18:34:16,040 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 18:34:16,255 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar11529105836694505714\bin\protoc.exe
+2023-03-23 18:34:16,256 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar8863132760603453449\include
+2023-03-23 18:34:16,340 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 18:34:16,345 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 18:34:16,346 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 18:34:16,348 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 18:34:16,351 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 18:34:16,363 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 18:34:16,364 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 18:34:16,366 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 18:34:16,367 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 18:34:16,368 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 18:34:16,370 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 18:34:16,371 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 18:34:16,881 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 18:34:16,881 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\resources
+2023-03-23 18:34:16,881 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 18:34:16,881 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar8863132760603453449\include
+2023-03-23 18:34:16,881 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 18:34:16,881 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:34:16,881 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:34:16,881 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 18:34:16,894 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:34:16,895 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:34:16,897 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:34:16,897 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:34:16,901 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:34:16,902 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:34:49,906 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 18:34:50,098 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar18425928841210815513\bin\protoc.exe
+2023-03-23 18:34:50,100 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar14709889369065870159\include
+2023-03-23 18:34:50,166 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 18:34:50,173 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 18:34:50,174 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 18:34:50,175 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 18:34:50,177 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 18:34:50,179 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 18:34:50,180 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 18:34:50,181 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 18:34:50,182 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 18:34:50,183 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 18:34:50,184 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 18:34:50,185 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 18:34:50,570 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 18:34:50,570 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\resources
+2023-03-23 18:34:50,570 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 18:34:50,570 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar14709889369065870159\include
+2023-03-23 18:34:50,570 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 18:34:50,570 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:34:50,570 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:34:50,571 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 18:34:50,579 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\resources\applicationoptimization.proto
+2023-03-23 18:34:50,580 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:34:50,580 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\resources\applicationoptimization.proto
+2023-03-23 18:34:50,580 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:34:50,583 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:34:50,583 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-03-23 18:34:50,589 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:34:50,589 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 18:44:59,410 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 18:44:59,517 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar9017807439079871289\bin\protoc.exe
+2023-03-23 18:44:59,518 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar11699971674342906224\include
+2023-03-23 18:44:59,578 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 18:44:59,592 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 18:44:59,593 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 18:44:59,594 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 18:44:59,596 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 18:44:59,598 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 18:44:59,599 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 18:44:59,600 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 18:44:59,601 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 18:44:59,602 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 18:44:59,603 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 18:44:59,604 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 18:45:00,060 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 18:45:00,060 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\resources
+2023-03-23 18:45:00,061 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 18:45:00,061 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar11699971674342906224\include
+2023-03-23 18:45:00,061 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 18:45:00,061 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:45:00,061 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 18:45:00,061 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 18:45:00,074 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\resources\applicationoptimization.proto
+2023-03-23 18:45:00,075 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:45:00,075 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\resources\applicationoptimization.proto
+2023-03-23 18:45:00,075 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 18:45:00,077 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:45:00,078 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-03-23 18:45:00,082 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 18:45:00,082 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 19:10:54,181 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 19:10:54,294 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar16738368616418980419\bin\protoc.exe
+2023-03-23 19:10:54,296 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar8849199184442405164\include
+2023-03-23 19:10:54,352 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 19:10:54,356 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 19:10:54,357 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 19:10:54,359 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 19:10:54,361 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 19:10:54,362 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 19:10:54,363 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 19:10:54,365 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 19:10:54,366 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 19:10:54,366 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 19:10:54,367 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 19:10:54,368 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 19:10:54,769 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 19:10:54,769 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\resources
+2023-03-23 19:10:54,769 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 19:10:54,769 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar8849199184442405164\include
+2023-03-23 19:10:54,769 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 19:10:54,769 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 19:10:54,769 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 19:10:54,770 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 19:10:54,780 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\resources\applicationoptimization.proto
+2023-03-23 19:10:54,780 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 19:10:54,781 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\resources\applicationoptimization.proto
+2023-03-23 19:10:54,781 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 19:10:54,783 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 19:10:54,784 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-03-23 19:10:54,789 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 19:10:54,789 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-03-23 19:11:01,448 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2023-03-23 19:11:19,151 [Worker-62: Launching ApplicationOptimization] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization":
+2023-03-23 19:11:19,151 [Worker-62: Launching ApplicationOptimization] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always 
+2023-03-23 19:12:36,883 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc version: 3.6.0
+2023-03-23 19:12:37,338 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Protoc command: C:\Users\Mmesi\AppData\Local\Temp\protocjar2633603602673401714\bin\protoc.exe
+2023-03-23 19:12:37,340 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Additional include types: C:\Users\Mmesi\AppData\Local\Temp\protocjar1185955876383240173\include
+2023-03-23 19:12:37,411 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/any.proto
+2023-03-23 19:12:37,415 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/api.proto
+2023-03-23 19:12:37,416 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/compiler/plugin.proto
+2023-03-23 19:12:37,417 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/descriptor.proto
+2023-03-23 19:12:37,422 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/duration.proto
+2023-03-23 19:12:37,423 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/empty.proto
+2023-03-23 19:12:37,424 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/field_mask.proto
+2023-03-23 19:12:37,425 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/source_context.proto
+2023-03-23 19:12:37,426 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/struct.proto
+2023-03-23 19:12:37,426 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/timestamp.proto
+2023-03-23 19:12:37,428 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/type.proto
+2023-03-23 19:12:37,429 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     google/protobuf/wrappers.proto
+2023-03-23 19:12:37,972 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Input directories:
+2023-03-23 19:12:37,973 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\resources
+2023-03-23 19:12:37,973 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Include directories:
+2023-03-23 19:12:37,973 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     C:\Users\Mmesi\AppData\Local\Temp\protocjar1185955876383240173\include
+2023-03-23 19:12:37,973 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Output targets:
+2023-03-23 19:12:37,973 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 19:12:37,973 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger -     grpc-java: C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java (add: main, clean: false, plugin: null, outputOptions: null)
+2023-03-23 19:12:37,973 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Resolving artifact: io.grpc:protoc-gen-grpc-java:1.15.0, platform: windows-x86_64
+2023-03-23 19:12:37,983 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\resources\applicationoptimization.proto
+2023-03-23 19:12:37,983 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 19:12:37,984 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Not changed C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\resources\applicationoptimization.proto
+2023-03-23 19:12:37,984 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding generated classes to classpath
+2023-03-23 19:12:37,987 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 19:12:37,988 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-03-23 19:12:37,990 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-03-23 19:12:37,991 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource

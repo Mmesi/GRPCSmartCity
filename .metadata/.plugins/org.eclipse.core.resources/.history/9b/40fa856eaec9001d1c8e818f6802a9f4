@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "ds.applicationoptimization";
+option java_outer_classname = "ApplicationOptimizationImpl";
+
+package ApplicationOptimization;
+
+//Service Definition
+service ApplicationOptimization{
+	rpc SetApplianceMode(SetApplianceModeRequest) returns (SetApplianceModeResponse){
+
+	}
+	rpc SetApplianceLimit(SetApplianceLimitRequest) returns (SetApplianceLimitResponse){
+
+	}
+	rpc SetApplianceSchedule(stream SetApplianceScheduleRequest) returns (stream SetApplianceScheduleResponse){
+
+	}
+}
+
+//

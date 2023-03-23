@@ -1,0 +1,38 @@
+syntax ="proto3";
+option java_multiple_files = true;
+option java_package = "ds.lightingsystem";
+option java_outer_classname = "LightingSystemImpl";
+
+package LightingSystem;
+
+
+//Service Definition
+service LightingSystem{
+	rpc SetLightLevels(stream SetLightLevelsRequest) returns (SetLightLevelsResponse){
+
+	}
+	rpc SwitchLight(SwitchLightRequest) returns (SwitchLightResponse){
+
+	}
+	rpc SetLightSchedule(stream SetLightScheduleRequest) returns (SetLightScheduleResponse){
+
+	}
+}
+message SetLightLevelsRequest{
+
+}
+message SetLightLevelsResponse{
+
+}
+message SwitchLightRequest{
+
+}
+message SwitchLightResponse{
+
+}
+message SetLightScheduleRequest{
+
+}
+message SetLightScheduleResponse{
+
+}
