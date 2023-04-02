@@ -1,8 +1,6 @@
 package ds.lightingsystem;
 
 import java.io.IOException;
-
-import ds.energymonitoring.EnergyMonitoringServer;
 import ds.lightingsystem.LightingSystemGrpc.LightingSystemImplBase;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
