@@ -511,15 +511,15 @@ private static final long serialVersionUID = 0L;
 
 	public Object setDeviceId(String deviceId) {
 		// TODO Auto-generated method stub
-		return null;
+		return "";
 	}
-	public Builder setStartTime(long value) {
+	public Object setStartTime(long value) {
 	      
 	      long startTime_ = value;
 	      onChanged();
 	      return this;
 	    }
-	public Builder setEndTime(long value) {
+	public Object setEndTime(long value) {
 	      
 	      long endTime_ = value;
 	      onChanged();

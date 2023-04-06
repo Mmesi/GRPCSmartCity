@@ -16,7 +16,7 @@ public class EnergyMonitoringServer extends EnergyMonitoringImplBase{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		EnergyMonitoringServer EMserver = new EnergyMonitoringServer();
-		int port = 50057;
+		int port = 50060;
 		
 		try {
 			Server server = ServerBuilder.forPort(port).addService(EMserver).build().start();
@@ -35,7 +35,7 @@ public class EnergyMonitoringServer extends EnergyMonitoringImplBase{
 
 	@Override
 	public void getEnergyUsage(GetEnergyUsageRequest request, StreamObserver<GetEnergyUsageResponse> responseObserver) {
-		final EnergyUsageRepository energyRepository = null;
+		final EnergyUsageRepository energyRepository = new EnergyUsageRepository() ;
 	    String deviceId = request.getDeviceId();
 	    long startTimeMillis = request.getStartTime() * 1000 + request.getStartTime() / 1000000;
 	    long endTimeMillis = request.getEndTime() * 1000 + request.getEndTime() / 1000000;
@@ -51,9 +51,7 @@ public class EnergyMonitoringServer extends EnergyMonitoringImplBase{
 
 	    float averagePowerConsumption = totalPowerConsumption / energyUsageList.size();
 
-	    GetEnergyUsageResponse response = ((Builder) GetEnergyUsageResponse.newBuilder()
-	            .setDeviceId(deviceId)).setStartTime(request.getStartTime()).setEndTime(request.getEndTime()).setTotalEnergyUsage(totalEnergyUsage).setAveragePowerConsumption(averagePowerConsumption)
-	            .build();
+	    GetEnergyUsageResponse response = GetEnergyUsageResponse.newBuilder().setTotalEnergyUsage(totalEnergyUsage).setAveragePowerConsumption(averagePowerConsumption).build();
 
 	    responseObserver.onNext(response);
 	    responseObserver.onCompleted();
