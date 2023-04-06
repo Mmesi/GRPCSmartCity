@@ -1,10 +1,14 @@
 package ds.energymonitoring;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import ds.energymonitoring.EnergyMonitoringGrpc.EnergyMonitoringImplBase;
+import ds.energymonitoring.GetEnergyUsageResponse.Builder;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
+import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 
 public class EnergyMonitoringServer extends EnergyMonitoringImplBase{
@@ -31,8 +35,28 @@ public class EnergyMonitoringServer extends EnergyMonitoringImplBase{
 
 	@Override
 	public void getEnergyUsage(GetEnergyUsageRequest request, StreamObserver<GetEnergyUsageResponse> responseObserver) {
-		// TODO Auto-generated method stub
-		super.getEnergyUsage(request, responseObserver);
+		final EnergyUsageRepository energyRepository = null;
+	    String deviceId = request.getDeviceId();
+	    long startTimeMillis = request.getStartTime() * 1000 + request.getStartTime() / 1000000;
+	    long endTimeMillis = request.getEndTime() * 1000 + request.getEndTime() / 1000000;
+	    List<EnergyUsage> energyUsageList = energyRepository.getEnergyUsage(deviceId, startTimeMillis, endTimeMillis);
+
+	    float totalEnergyUsage = 0.0f;
+	    float totalPowerConsumption = 0.0f;
+
+	    for (EnergyUsage energyUsage : energyUsageList) {
+	        totalEnergyUsage += energyUsage.getUsage();
+	        totalPowerConsumption += energyUsage.getPowerConsumption();
+	        }
+
+	    float averagePowerConsumption = totalPowerConsumption / energyUsageList.size();
+
+	    GetEnergyUsageResponse response = ((Builder) GetEnergyUsageResponse.newBuilder()
+	            .setDeviceId(deviceId)).setStartTime(request.getStartTime()).setEndTime(request.getEndTime()).setTotalEnergyUsage(totalEnergyUsage).setAveragePowerConsumption(averagePowerConsumption)
+	            .build();
+
+	    responseObserver.onNext(response);
+	    responseObserver.onCompleted();
 	}
 
 	@Override
