@@ -16,4 +16,9 @@ public interface SwitchLightRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getLightIdBytes();
+
+  /**
+   * <code>bool status = 2;</code>
+   */
+  boolean getStatus();
 }

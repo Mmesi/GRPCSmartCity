@@ -35,7 +35,8 @@ public class EnergyMonitoringServer extends EnergyMonitoringImplBase{
 
 	@Override
 	public void getEnergyUsage(GetEnergyUsageRequest request, StreamObserver<GetEnergyUsageResponse> responseObserver) {
-		final EnergyUsageRepository energyRepository = new EnergyUsageRepository() ;
+		final EnergyUsageRepository energyRepository = new EnergyUsageRepository();
+		
 	    String deviceId = request.getDeviceId();
 	    long startTimeMillis = request.getStartTime() * 1000 + request.getStartTime() / 1000000;
 	    long endTimeMillis = request.getEndTime() * 1000 + request.getEndTime() / 1000000;
@@ -60,21 +61,30 @@ public class EnergyMonitoringServer extends EnergyMonitoringImplBase{
 	@Override
 	public void getEnergyUsageBySource(UsageBySourceRequest request,
 			StreamObserver<UsageBySourceResponse> responseObserver) {
-		// TODO Auto-generated method stub
-		super.getEnergyUsageBySource(request, responseObserver);
-	}
+		    // Create an empty response object
+		    UsageBySourceResponse response = UsageBySourceResponse.newBuilder().build();
+
+		    // Send the response back to the client
+		    responseObserver.onNext(response);
+		    responseObserver.onCompleted();
+		
+		    
+		}
+
+		
+		
+
 
 	@Override
 	public void getEnergyUsageHistory(GetEnergyUsageHistoryRequest request,
 			StreamObserver<EnergyUsageHistoryData> responseObserver) {
-		// TODO Auto-generated method stub
-		super.getEnergyUsageHistory(request, responseObserver);
+		EnergyUsageHistoryData response = EnergyUsageHistoryData.newBuilder().build();
+
+	    // Send the response back to the client
+	    responseObserver.onNext(response);
+	    responseObserver.onCompleted();
+		
 	}
-	
-
-	
-
-
 	}
 
 

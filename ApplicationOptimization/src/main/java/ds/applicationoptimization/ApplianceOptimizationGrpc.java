@@ -22,10 +22,10 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.15.0)",
-    comments = "Source: applicationoptimization.proto")
-public final class ApplicationOptimizationGrpc {
+    comments = "Source: applianceoptimization.proto")
+public final class ApplianceOptimizationGrpc {
 
-  private ApplicationOptimizationGrpc() {}
+  private ApplianceOptimizationGrpc() {}
 
   public static final String SERVICE_NAME = "ApplicationOptimization.ApplicationOptimization";
 
@@ -41,10 +41,10 @@ public final class ApplicationOptimizationGrpc {
   public static io.grpc.MethodDescriptor<ds.applicationoptimization.SetApplianceModeRequest,
       ds.applicationoptimization.SetApplianceModeResponse> getSetApplianceModeMethod() {
     io.grpc.MethodDescriptor<ds.applicationoptimization.SetApplianceModeRequest, ds.applicationoptimization.SetApplianceModeResponse> getSetApplianceModeMethod;
-    if ((getSetApplianceModeMethod = ApplicationOptimizationGrpc.getSetApplianceModeMethod) == null) {
-      synchronized (ApplicationOptimizationGrpc.class) {
-        if ((getSetApplianceModeMethod = ApplicationOptimizationGrpc.getSetApplianceModeMethod) == null) {
-          ApplicationOptimizationGrpc.getSetApplianceModeMethod = getSetApplianceModeMethod = 
+    if ((getSetApplianceModeMethod = ApplianceOptimizationGrpc.getSetApplianceModeMethod) == null) {
+      synchronized (ApplianceOptimizationGrpc.class) {
+        if ((getSetApplianceModeMethod = ApplianceOptimizationGrpc.getSetApplianceModeMethod) == null) {
+          ApplianceOptimizationGrpc.getSetApplianceModeMethod = getSetApplianceModeMethod = 
               io.grpc.MethodDescriptor.<ds.applicationoptimization.SetApplianceModeRequest, ds.applicationoptimization.SetApplianceModeResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
@@ -73,10 +73,10 @@ public final class ApplicationOptimizationGrpc {
   public static io.grpc.MethodDescriptor<ds.applicationoptimization.SetApplianceLimitRequest,
       ds.applicationoptimization.SetApplianceLimitResponse> getSetApplianceLimitMethod() {
     io.grpc.MethodDescriptor<ds.applicationoptimization.SetApplianceLimitRequest, ds.applicationoptimization.SetApplianceLimitResponse> getSetApplianceLimitMethod;
-    if ((getSetApplianceLimitMethod = ApplicationOptimizationGrpc.getSetApplianceLimitMethod) == null) {
-      synchronized (ApplicationOptimizationGrpc.class) {
-        if ((getSetApplianceLimitMethod = ApplicationOptimizationGrpc.getSetApplianceLimitMethod) == null) {
-          ApplicationOptimizationGrpc.getSetApplianceLimitMethod = getSetApplianceLimitMethod = 
+    if ((getSetApplianceLimitMethod = ApplianceOptimizationGrpc.getSetApplianceLimitMethod) == null) {
+      synchronized (ApplianceOptimizationGrpc.class) {
+        if ((getSetApplianceLimitMethod = ApplianceOptimizationGrpc.getSetApplianceLimitMethod) == null) {
+          ApplianceOptimizationGrpc.getSetApplianceLimitMethod = getSetApplianceLimitMethod = 
               io.grpc.MethodDescriptor.<ds.applicationoptimization.SetApplianceLimitRequest, ds.applicationoptimization.SetApplianceLimitResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
@@ -105,10 +105,10 @@ public final class ApplicationOptimizationGrpc {
   public static io.grpc.MethodDescriptor<ds.applicationoptimization.SetApplianceScheduleRequest,
       ds.applicationoptimization.SetApplianceScheduleResponse> getSetApplianceScheduleMethod() {
     io.grpc.MethodDescriptor<ds.applicationoptimization.SetApplianceScheduleRequest, ds.applicationoptimization.SetApplianceScheduleResponse> getSetApplianceScheduleMethod;
-    if ((getSetApplianceScheduleMethod = ApplicationOptimizationGrpc.getSetApplianceScheduleMethod) == null) {
-      synchronized (ApplicationOptimizationGrpc.class) {
-        if ((getSetApplianceScheduleMethod = ApplicationOptimizationGrpc.getSetApplianceScheduleMethod) == null) {
-          ApplicationOptimizationGrpc.getSetApplianceScheduleMethod = getSetApplianceScheduleMethod = 
+    if ((getSetApplianceScheduleMethod = ApplianceOptimizationGrpc.getSetApplianceScheduleMethod) == null) {
+      synchronized (ApplianceOptimizationGrpc.class) {
+        if ((getSetApplianceScheduleMethod = ApplianceOptimizationGrpc.getSetApplianceScheduleMethod) == null) {
+          ApplianceOptimizationGrpc.getSetApplianceScheduleMethod = getSetApplianceScheduleMethod = 
               io.grpc.MethodDescriptor.<ds.applicationoptimization.SetApplianceScheduleRequest, ds.applicationoptimization.SetApplianceScheduleResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(
@@ -378,7 +378,7 @@ public final class ApplicationOptimizationGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return ds.applicationoptimization.ApplicationOptimizationImpl.getDescriptor();
+      return ds.applicationoptimization.ApplianceOptimizationImpl.getDescriptor();
     }
 
     @java.lang.Override
@@ -412,7 +412,7 @@ public final class ApplicationOptimizationGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (ApplicationOptimizationGrpc.class) {
+      synchronized (ApplianceOptimizationGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)

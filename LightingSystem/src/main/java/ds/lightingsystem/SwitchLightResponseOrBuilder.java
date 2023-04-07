@@ -11,4 +11,14 @@ public interface SwitchLightResponseOrBuilder extends
    * <code>bool light_state = 1;</code>
    */
   boolean getLightState();
+
+  /**
+   * <code>string message = 2;</code>
+   */
+  java.lang.String getMessage();
+  /**
+   * <code>string message = 2;</code>
+   */
+  com.google.protobuf.ByteString
+      getMessageBytes();
 }

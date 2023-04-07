@@ -57,22 +57,23 @@ public final class LightingSystemImpl {
       "\n\025SetLightLevelsRequest\022\021\n\tsystem_id\030\001 \001" +
       "(\t\022\021\n\tintensity\030\002 \001(\002\"9\n\026SetLightLevelsR" +
       "esponse\022\016\n\006status\030\001 \001(\010\022\017\n\007message\030\002 \001(\t" +
-      "\"&\n\022SwitchLightRequest\022\020\n\010light_id\030\001 \001(\t" +
-      "\"*\n\023SwitchLightResponse\022\023\n\013light_state\030\001" +
-      " \001(\010\"e\n\027SetLightScheduleRequest\022\021\n\tsyste" +
-      "m_id\030\001 \001(\t\022\022\n\nstart_time\030\002 \001(\003\022\020\n\010end_ti" +
-      "me\030\003 \001(\003\022\021\n\tintensity\030\004 \001(\002\";\n\030SetLightS" +
-      "cheduleResponse\022\016\n\006status\030\001 \001(\010\022\017\n\007messa" +
-      "ge\030\002 \001(\t2\272\002\n\016LightingSystem\022c\n\016SetLightL" +
-      "evels\022%.LightingSystem.SetLightLevelsReq" +
-      "uest\032&.LightingSystem.SetLightLevelsResp" +
-      "onse\"\000(\001\022X\n\013SwitchLight\022\".LightingSystem" +
-      ".SwitchLightRequest\032#.LightingSystem.Swi" +
-      "tchLightResponse\"\000\022i\n\020SetLightSchedule\022\'" +
-      ".LightingSystem.SetLightScheduleRequest\032" +
-      "(.LightingSystem.SetLightScheduleRespons" +
-      "e\"\000(\001B)\n\021ds.lightingsystemB\022LightingSyst" +
-      "emImplP\001b\006proto3"
+      "\"6\n\022SwitchLightRequest\022\020\n\010light_id\030\001 \001(\t" +
+      "\022\016\n\006status\030\002 \001(\010\";\n\023SwitchLightResponse\022" +
+      "\023\n\013light_state\030\001 \001(\010\022\017\n\007message\030\002 \001(\t\"e\n" +
+      "\027SetLightScheduleRequest\022\021\n\tsystem_id\030\001 " +
+      "\001(\t\022\022\n\nstart_time\030\002 \001(\003\022\020\n\010end_time\030\003 \001(" +
+      "\003\022\021\n\tintensity\030\004 \001(\002\";\n\030SetLightSchedule" +
+      "Response\022\016\n\006status\030\001 \001(\010\022\017\n\007message\030\002 \001(" +
+      "\t2\272\002\n\016LightingSystem\022c\n\016SetLightLevels\022%" +
+      ".LightingSystem.SetLightLevelsRequest\032&." +
+      "LightingSystem.SetLightLevelsResponse\"\000(" +
+      "\001\022X\n\013SwitchLight\022\".LightingSystem.Switch" +
+      "LightRequest\032#.LightingSystem.SwitchLigh" +
+      "tResponse\"\000\022i\n\020SetLightSchedule\022\'.Lighti" +
+      "ngSystem.SetLightScheduleRequest\032(.Light" +
+      "ingSystem.SetLightScheduleResponse\"\000(\001B)" +
+      "\n\021ds.lightingsystemB\022LightingSystemImplP" +
+      "\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -103,13 +104,13 @@ public final class LightingSystemImpl {
     internal_static_LightingSystem_SwitchLightRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_LightingSystem_SwitchLightRequest_descriptor,
-        new java.lang.String[] { "LightId", });
+        new java.lang.String[] { "LightId", "Status", });
     internal_static_LightingSystem_SwitchLightResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_LightingSystem_SwitchLightResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_LightingSystem_SwitchLightResponse_descriptor,
-        new java.lang.String[] { "LightState", });
+        new java.lang.String[] { "LightState", "Message", });
     internal_static_LightingSystem_SetLightScheduleRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_LightingSystem_SetLightScheduleRequest_fieldAccessorTable = new

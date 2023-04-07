@@ -30,10 +30,12 @@ message SetLightLevelsResponse{
 }
 message SwitchLightRequest{
 	string light_id = 1;
+	bool status = 2;
 
 }
 message SwitchLightResponse{
 	bool light_state = 1;
+	string message = 2;
 
 }
 message SetLightScheduleRequest{
