@@ -76,13 +76,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return ds.applicationoptimization.ApplianceOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceLimitResponse_descriptor;
+    return ds.applicationoptimization.ApplicationOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceLimitResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return ds.applicationoptimization.ApplianceOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceLimitResponse_fieldAccessorTable
+    return ds.applicationoptimization.ApplicationOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceLimitResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             ds.applicationoptimization.SetApplianceLimitResponse.class, ds.applicationoptimization.SetApplianceLimitResponse.Builder.class);
   }
@@ -306,13 +306,13 @@ private static final long serialVersionUID = 0L;
       ds.applicationoptimization.SetApplianceLimitResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ds.applicationoptimization.ApplianceOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceLimitResponse_descriptor;
+      return ds.applicationoptimization.ApplicationOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceLimitResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ds.applicationoptimization.ApplianceOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceLimitResponse_fieldAccessorTable
+      return ds.applicationoptimization.ApplicationOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceLimitResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               ds.applicationoptimization.SetApplianceLimitResponse.class, ds.applicationoptimization.SetApplianceLimitResponse.Builder.class);
     }
@@ -345,7 +345,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return ds.applicationoptimization.ApplianceOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceLimitResponse_descriptor;
+      return ds.applicationoptimization.ApplicationOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceLimitResponse_descriptor;
     }
 
     @java.lang.Override

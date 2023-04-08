@@ -33,18 +33,24 @@ public class ApplianceOptimizationServer extends ApplicationOptimizationImplBase
 	@Override
 		public void setApplianceMode(SetApplianceModeRequest request, StreamObserver<SetApplianceModeResponse> responseObserver) {
 		    // Implement code to set the appliance mode based on the request parameters
+			String applianceId = request.getApplianceId();
 		    String mode = request.getMode();
+		    String location = request.getLocation();
 		    System.out.println("Setting appliance mode to " + mode + "...");
+		    boolean status = setApplianceModeLogic(applianceId, mode, location);
 
 		    // Create a response object to confirm the mode change
-		    SetApplianceModeResponse response = SetApplianceModeResponse.newBuilder()
-		        .setMessage("Appliance mode set to " + mode + " successfully.")
-		        .build();
+		    SetApplianceModeResponse response = SetApplianceModeResponse.newBuilder().setStatus(status).setMessage(status ? "Appliance mode set successfully" : "Failed to set appliance mode")
+	                .build();
 
 		    // Send the response back to the client
 		    responseObserver.onNext(response);
 		    responseObserver.onCompleted();
 		}
+	private boolean setApplianceModeLogic(String applianceId, String mode, String location) {
+	    System.out.println("Setting mode of appliance " + applianceId + " to " + mode + " in location " + location);
+	    return true;
+	}
 
 
 	@Override

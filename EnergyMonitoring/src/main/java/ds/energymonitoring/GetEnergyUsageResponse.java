@@ -3,12 +3,6 @@
 
 package ds.energymonitoring;
 
-import java.util.List;
-
-import com.google.protobuf.Timestamp;
-
-import ds.energymonitoring.GetEnergyUsageRequest.Builder;
-
 /**
  * Protobuf type {@code EnergyMonitoring.GetEnergyUsageResponse}
  */
@@ -499,32 +493,7 @@ private static final long serialVersionUID = 0L;
       return super.mergeUnknownFields(unknownFields);
     }
 
-	public Builder addAllUsageData(List<GetEnergyUsageResponse> energyUsageList) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
-	public Object setTimestamp(Timestamp timestamp) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Object setDeviceId(String deviceId) {
-		// TODO Auto-generated method stub
-		return "";
-	}
-	public Object setStartTime(long value) {
-	      
-	      long startTime_ = value;
-	      onChanged();
-	      return this;
-	    }
-	public Object setEndTime(long value) {
-	      
-	      long endTime_ = value;
-	      onChanged();
-	      return this;
-	    }
     // @@protoc_insertion_point(builder_scope:EnergyMonitoring.GetEnergyUsageResponse)
   }
 

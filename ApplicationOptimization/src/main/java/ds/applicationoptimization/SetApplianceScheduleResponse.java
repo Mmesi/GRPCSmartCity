@@ -70,13 +70,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return ds.applicationoptimization.ApplianceOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceScheduleResponse_descriptor;
+    return ds.applicationoptimization.ApplicationOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceScheduleResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return ds.applicationoptimization.ApplianceOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceScheduleResponse_fieldAccessorTable
+    return ds.applicationoptimization.ApplicationOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceScheduleResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             ds.applicationoptimization.SetApplianceScheduleResponse.class, ds.applicationoptimization.SetApplianceScheduleResponse.Builder.class);
   }
@@ -279,13 +279,13 @@ private static final long serialVersionUID = 0L;
       ds.applicationoptimization.SetApplianceScheduleResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ds.applicationoptimization.ApplianceOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceScheduleResponse_descriptor;
+      return ds.applicationoptimization.ApplicationOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceScheduleResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ds.applicationoptimization.ApplianceOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceScheduleResponse_fieldAccessorTable
+      return ds.applicationoptimization.ApplicationOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceScheduleResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               ds.applicationoptimization.SetApplianceScheduleResponse.class, ds.applicationoptimization.SetApplianceScheduleResponse.Builder.class);
     }
@@ -316,7 +316,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return ds.applicationoptimization.ApplianceOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceScheduleResponse_descriptor;
+      return ds.applicationoptimization.ApplicationOptimizationImpl.internal_static_ApplicationOptimization_SetApplianceScheduleResponse_descriptor;
     }
 
     @java.lang.Override
