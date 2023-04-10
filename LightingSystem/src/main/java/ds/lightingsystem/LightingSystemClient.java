@@ -25,8 +25,9 @@ public class LightingSystemClient {
 		
 		setLightLevels();
 		switchLight();
+		
+		setLightSchedule();
 		channel.shutdown();
-
 	}
 	
 	
@@ -123,5 +124,54 @@ public class LightingSystemClient {
         
 		
 	}
+	public static void setLightSchedule() {
+		
+		StreamObserver<SetLightScheduleResponse> responseObserver = new StreamObserver<SetLightScheduleResponse>() {
 
+			@Override
+			public void onNext(SetLightScheduleResponse response) {
+				 System.out.println("Status: " + response.getStatus());
+	             System.out.println("Message: " + response.getMessage());
+			}
+
+			@Override
+			public void onError(Throwable t) {
+				t.printStackTrace();
+			}
+
+			@Override
+			public void onCompleted() {
+				System.out.println("stream is completed");
+			}
+
+		};
+	StreamObserver<SetLightScheduleRequest> requestObserver = asyncStub.setLightSchedule(responseObserver);
+	try {
+		requestObserver.onNext(SetLightScheduleRequest.newBuilder().setSystemId("L12").setStartTime(174233).setEndTime(182322).setIntensity(10).build());
+		Thread.sleep(500);
+
+		requestObserver.onNext(SetLightScheduleRequest.newBuilder().setSystemId("L31").setStartTime(174233).setEndTime(182322).setIntensity(11).build());
+		Thread.sleep(500);
+
+		requestObserver.onNext(SetLightScheduleRequest.newBuilder().setSystemId("L45").setStartTime(174233).setEndTime(182322).setIntensity(12).build());
+		Thread.sleep(500);
+
+		requestObserver.onNext(SetLightScheduleRequest.newBuilder().setSystemId("L32").setStartTime(174233).setEndTime(182322).setIntensity(13).build());
+		Thread.sleep(500);
+
+		requestObserver.onNext(SetLightScheduleRequest.newBuilder().setSystemId("L80").setStartTime(174233).setEndTime(182322).setIntensity(14).build());
+		Thread.sleep(500);
+		
+		
+requestObserver.onCompleted();
+
+		
+		Thread.sleep(10000);
+		
+	} catch (RuntimeException e) {
+		e.printStackTrace();
+	} catch (InterruptedException e) {			
+		e.printStackTrace();
+	}
 }
+	}

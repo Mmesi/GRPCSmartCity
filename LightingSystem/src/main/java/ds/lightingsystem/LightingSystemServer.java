@@ -1,6 +1,10 @@
 package ds.lightingsystem;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import ds.lightingsystem.LightingSystemGrpc.LightingSystemImplBase;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
@@ -101,13 +105,40 @@ public class LightingSystemServer extends LightingSystemImplBase{
 		}
 
 
-	public StreamObserver<SetLightScheduleRequest> setLightSchedule(StreamObserver<SetLightScheduleResponse> responseObserver) {
+	/*public StreamObserver<SetLightScheduleRequest> setLightSchedule(StreamObserver<SetLightScheduleResponse> responseObserver) {
 	    return new StreamObserver<SetLightScheduleRequest>() {
 	        @Override
 	        public void onNext(SetLightScheduleRequest request) {
-	            // Implement code to set the light schedule based on the request parameters
-	            // ...
+	        	
+	    				System.out.println("Set Light Schedule of : "+ request.getSystemId() + " from: "+ request.getStartTime() + " to: "+ request.getEndTime() + "with an Intensity of: " +request.getIntensity());
+	    				
+	    				String converted =  Integer.toString(Integer.parseInt(msg.getNumC(), msg.getFromBase()), msg.getToBase());
+	    				
+	    				ConvertResponse reply = ConvertResponse.newBuilder().setNumber(converted).setBase(msg.getToBase()).build();
+	    				
+	    				responseObserver.onNext(reply);
+	    				
+	    			}
 
+	    			@Override
+	    			public void onError(Throwable t) {
+	    				
+	    				t.printStackTrace();
+	    				
+	    			}
+
+	    			@Override
+	    			public void onCompleted() {
+	    				System.out.println("receiving convertBase completed ");
+	    				
+	    				//completed too
+	    				responseObserver.onCompleted();
+	    			}
+	    			
+	    		};
+	    	}
+
+	    	
 	            // Create a response object to confirm receipt of the request
 	            SetLightScheduleResponse response = SetLightScheduleResponse.newBuilder().setMessage("Light schedule set successfully.").build();
 
@@ -127,7 +158,48 @@ public class LightingSystemServer extends LightingSystemImplBase{
 	            responseObserver.onCompleted();
 	        }
 	    };
-	}
+	}*/
 
+
+	    @Override
+	    public StreamObserver<SetLightScheduleRequest> setLightSchedule(StreamObserver<SetLightScheduleResponse> responseObserver) {
+	        return new StreamObserver<SetLightScheduleRequest>() {
+
+	            // Store the schedules received from the client
+	            List<LightSchedule> schedules = new ArrayList<>();
+
+	            @Override
+	            public void onNext(SetLightScheduleRequest request) {
+	                // Create a new light schedule from the request
+	            	System.out.println("Setting Light Schedule of : "+ request.getSystemId() + " from: "+ request.getStartTime() + " to: "+ request.getEndTime() + "with an Intensity of: " +request.getIntensity());
+	                LightSchedule schedule = new LightSchedule(request.getSystemId(), request.getStartTime(), request.getEndTime(), request.getIntensity());
+
+	                // Add the schedule to the list
+	                schedules.add(schedule);
+
+	                // Log the new schedule
+	                System.out.println("Received new light schedule: " + schedule.getSystemID());
+	            }
+
+	            @Override
+	            public void onError(Throwable throwable) {
+	                // Log any errors
+	                System.out.println("Error in setLightSchedule: " + throwable.getMessage());
+	            }
+
+	            @Override
+	            public void onCompleted() {
+	                // TODO: Implement logic to set the light schedules
+
+	                // Send the response to the client
+	                SetLightScheduleResponse response = SetLightScheduleResponse.newBuilder()
+	                        .setStatus(true)
+	                        .setMessage("Light schedules have been set.")
+	                        .build();
+	                responseObserver.onNext(response);
+	                responseObserver.onCompleted();
+	            }
+	        };
+	    }
 	}
 
