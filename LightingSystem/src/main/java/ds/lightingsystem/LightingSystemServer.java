@@ -11,7 +11,7 @@ public class LightingSystemServer extends LightingSystemImplBase{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		LightingSystemServer LSserver = new LightingSystemServer();
-		int port = 50059;
+		int port = 50063;
 		
 		try {
 			Server server = ServerBuilder.forPort(port).addService(LSserver).build().start();
@@ -30,39 +30,59 @@ public class LightingSystemServer extends LightingSystemImplBase{
 
 	public StreamObserver<SetLightLevelsRequest> setLightLevels(StreamObserver<SetLightLevelsResponse> responseObserver) {
 	    return new StreamObserver<SetLightLevelsRequest>() {
+	    	
+	    	 private float intensitySum = 0;
+	         private int numRequests = 0;
+	         String systemId = "";
+	         float intensity = 0;
+	        
 	        @Override
 	        public void onNext(SetLightLevelsRequest request) {
-	            // Implement code to set the light levels based on the request parameters
-	            // ...
-
-	            // Create a response object to confirm receipt of the request
-	            SetLightLevelsResponse response = SetLightLevelsResponse.newBuilder()
-	                .setMessage("Light levels set successfully.")
-	                .build();
-
-	            // Send the response back to the client
-	            responseObserver.onNext(response);
+	        	systemId = request.getSystemId();
+	        	intensity = request.getIntensity();
+	        	intensitySum += request.getIntensity();
+	            numRequests++;	            
+	            System.out.println("Light System with ID: " + systemId +" to be set to an intensity of " + intensity);
+	   	            // Send the response back to the client
 	        }
 
 	        @Override
 	        public void onError(Throwable t) {
-	            // Handle any errors that might occur and send an error response back to the client
-	            responseObserver.onError(t);
+	        	System.err.println("Error during setLightLevels streaming: " + t.getMessage());
+	            responseObserver.onNext(SetLightLevelsResponse.newBuilder().setStatus(false).setMessage("Error during streaming: " + t.getMessage())
+	                .build());
+	            responseObserver.onCompleted();
 	        }
 
 	        @Override
 	        public void onCompleted() {
-	            // Signal the end of the response stream
+	        	// compute the average intensity from all requests
+	            float averageIntensity = intensitySum / numRequests;
+
+	            // call the logic method to set the light levels
+	            boolean success = setLightLevelsLogic(systemId, averageIntensity);
+
+	            // send a response based on the result of the operation
+	            responseObserver.onNext(SetLightLevelsResponse.newBuilder()
+	                .setStatus(success)
+	                .setMessage(success ? "Light levels set successfully" : "Failed to set light levels")
+	                .build());
 	            responseObserver.onCompleted();
 	        }
 	    };
 	}
-
+	private boolean setLightLevelsLogic(String systemId, float intensity){
+		
+		//System.out.println("Light Level" + systemId +" to be set to an intensity of" + intensity);
+		
+		return true;
+	}
+	
+	
 
 	@Override
 	public void switchLight(SwitchLightRequest request, StreamObserver<SwitchLightResponse> responseObserver) {
 		
-		    // Implement code to switch the light on or off based on the request parameters
 		    boolean lightState = request.getStatus();
 		    if (lightState) {
 		        System.out.println("Switching light on...");
@@ -71,7 +91,7 @@ public class LightingSystemServer extends LightingSystemImplBase{
 		    }
 
 		    // Create a response object to confirm the state change
-		    SwitchLightResponse response = SwitchLightResponse.newBuilder()
+		    SwitchLightResponse response = SwitchLightResponse.newBuilder().setLightState(lightState)
 		        .setMessage("Light switched " + (lightState ? "on" : "off") + " successfully.")
 		        .build();
 
