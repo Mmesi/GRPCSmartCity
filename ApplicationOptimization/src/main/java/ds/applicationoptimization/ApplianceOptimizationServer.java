@@ -61,7 +61,7 @@ public class ApplianceOptimizationServer extends ApplicationOptimizationImplBase
 
 	    // Create a response object to confirm the limit change
 	    SetApplianceLimitResponse response = SetApplianceLimitResponse.newBuilder()
-	        .setMessage("Appliance limit set to " + limit + " successfully.")
+	        .setMessage("Appliance limit set to " + limit + "Kwh successfully.")
 	        .build();
 
 	    // Send the response back to the client
@@ -73,7 +73,7 @@ public class ApplianceOptimizationServer extends ApplicationOptimizationImplBase
 	@Override
 	public StreamObserver<SetApplianceScheduleRequest> setApplianceSchedule(StreamObserver<SetApplianceScheduleResponse> responseObserver) {
 	    return new StreamObserver<SetApplianceScheduleRequest>() {
-	        private StringBuilder messageBuilder = new StringBuilder("Appliance schedule set: ");
+	        private StringBuilder messageBuilder = new StringBuilder("");
 	        private int count = 0;
 	        
 	        @Override
@@ -82,13 +82,13 @@ public class ApplianceOptimizationServer extends ApplicationOptimizationImplBase
 	        	String applianceId = request.getApplianceId();
 	            int startTime = (int) request.getStartTime();
 	            int endTime = (int) request.getEndTime();
-	            System.out.println("Setting appliance schedule from " + startTime + " to " + endTime + "...");
+	            System.out.println("Setting " + applianceId + " schedule from " + startTime + " to " + endTime + "...");
 	            
 	            // Append the schedule information to the response message
 	            if (count > 0) {
-	                messageBuilder.append(", ");
+	                messageBuilder.append("Appliance schedule for " +applianceId + " set");
 	            }
-	            messageBuilder.append("Day ").append(": from ").append(startTime).append(" to ").append(endTime);
+	            messageBuilder.append(": from ").append(startTime).append(" to ").append(endTime+"\n");
 	            count++;
 	        }
 
