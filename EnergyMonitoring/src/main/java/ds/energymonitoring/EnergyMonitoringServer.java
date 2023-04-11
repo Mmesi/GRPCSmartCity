@@ -16,7 +16,7 @@ public class EnergyMonitoringServer extends EnergyMonitoringImplBase{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		EnergyMonitoringServer EMserver = new EnergyMonitoringServer();
-		int port = 50060;
+		int port = 50070;
 		
 		try {
 			Server server = ServerBuilder.forPort(port).addService(EMserver).build().start();
@@ -38,8 +38,8 @@ public class EnergyMonitoringServer extends EnergyMonitoringImplBase{
 		final EnergyUsageRepository energyRepository = new EnergyUsageRepository();
 		
 	    String deviceId = request.getDeviceId();
-	    long startTimeMillis = request.getStartTime() * 1000 + request.getStartTime() / 1000000;
-	    long endTimeMillis = request.getEndTime() * 1000 + request.getEndTime() / 1000000;
+	    long startTimeMillis = request.getStartTime();
+	    long endTimeMillis = request.getEndTime();
 	    List<EnergyUsage> energyUsageList = energyRepository.getEnergyUsage(deviceId, startTimeMillis, endTimeMillis);
 
 	    float totalEnergyUsage = 0.0f;
@@ -61,30 +61,56 @@ public class EnergyMonitoringServer extends EnergyMonitoringImplBase{
 	@Override
 	public void getEnergyUsageBySource(UsageBySourceRequest request,
 			StreamObserver<UsageBySourceResponse> responseObserver) {
-		    // Create an empty response object
-		    UsageBySourceResponse response = UsageBySourceResponse.newBuilder().build();
+		        long startTime = request.getStartTime();
+		        long endTime = request.getEndTime();
+		        String source_id = request.getSourceId();
 
-		    // Send the response back to the client
-		    responseObserver.onNext(response);
-		    responseObserver.onCompleted();
-		
+		        // In this implementation, we simulate energy usage data
+		        // for the given source and time range, and stream the results back
+		        long interval = 60; // seconds
+		        long currentTime = startTime;
+		        while (currentTime < endTime) {
+		            float energyUsage = EnergyUsage(source_id, currentTime, currentTime + interval);
+		            UsageBySourceResponse response = UsageBySourceResponse.newBuilder()
+		                    .setEnergyUsage(energyUsage)
+		                    .build();
+		            responseObserver.onNext(response);
+		            currentTime += interval;
+		            try {
+						//wait for a second
+						Thread.sleep(1000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+		        }
+
+		        responseObserver.onCompleted();
+		    }
+
+		    private float EnergyUsage(String sourceId, long startTime, long endTime) {
+		        
+		        return 1.0f;
 		    
 		}
 
 		
 		
 
-
-	@Override
+@Override
 	public void getEnergyUsageHistory(GetEnergyUsageHistoryRequest request,
 			StreamObserver<EnergyUsageHistoryData> responseObserver) {
-		EnergyUsageHistoryData response = EnergyUsageHistoryData.newBuilder().build();
+		
+		final EnergyUsageRepository energyRepository = new EnergyUsageRepository();
+	        List<EnergyUsageHistoryData> energyUsageHistoryDataList = energyRepository.getEnergyUsageHistory(request.getDeviceId());
 
-	    // Send the response back to the client
-	    responseObserver.onNext(response);
-	    responseObserver.onCompleted();
+	        for (EnergyUsageHistoryData e : energyUsageHistoryDataList) {
+	            responseObserver.onNext(e);
+	        }
+	        responseObserver.onCompleted();
+	    }
 		
 	}
-	}
+	
 
 

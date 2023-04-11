@@ -36,4 +36,9 @@ public class EnergyUsageRepository{
         return usageData;
     }
 
+	public List<EnergyUsageHistoryData> getEnergyUsageHistory(String deviceId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
