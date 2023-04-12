@@ -1,14 +1,18 @@
-C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceScheduleRequestOrBuilder.java
-C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java\ds\applicationoptimization\ApplicationOptimizationGrpc.java
-C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceModeResponseOrBuilder.java
-C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceModeRequest.java
-C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceLimitRequestOrBuilder.java
-C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java\ds\applicationoptimization\ApplicationOptimizationImpl.java
-C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceModeRequestOrBuilder.java
-C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceModeResponse.java
-C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceScheduleResponseOrBuilder.java
-C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceScheduleRequest.java
-C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceLimitRequest.java
-C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceLimitResponse.java
-C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceLimitResponseOrBuilder.java
-C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\CA PROJECT\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceScheduleResponse.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\ApplicationOptimization\src\main\java\ds\applicationoptimization\ApplianceOptimizationServer.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\ApplicationOptimization\src\main\java\ds\applicationoptimization\ApplicationOptimizationGrpc.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceModeRequestOrBuilder.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\ApplicationOptimization\src\main\java\ds\applicationoptimization\ApplianceOptimizationClient.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\ApplicationOptimization\src\main\java\ds\applicationoptimization\ApplicationOptimizationImpl.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceLimitRequest.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceModeResponseOrBuilder.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceLimitResponseOrBuilder.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceLimitResponse.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceModeResponse.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceLimitRequestOrBuilder.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceScheduleRequestOrBuilder.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\ApplicationOptimization\src\main\java\ds\applicationoptimization\ApplianceOptimizationImpl.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceModeRequest.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceScheduleResponse.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\ApplicationOptimization\src\main\java\ds\applicationoptimization\ApplianceOptimizationGrpc.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceScheduleRequest.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\ApplicationOptimization\src\main\java\ds\applicationoptimization\SetApplianceScheduleResponseOrBuilder.java

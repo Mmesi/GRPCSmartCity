@@ -4,12 +4,14 @@ C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GR
 C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\LightingSystem\src\main\java\ds\lightingsystem\LightingSystemGrpc.java
 C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\LightingSystem\src\main\java\ds\lightingsystem\SetLightLevelsRequestOrBuilder.java
 C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\LightingSystem\src\main\java\ds\lightingsystem\LightingSystemServer.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\LightingSystem\src\main\java\ds\lightingsystem\LightSchedule.java
 C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\LightingSystem\src\main\java\ds\lightingsystem\SwitchLightResponseOrBuilder.java
 C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\LightingSystem\src\main\java\ds\lightingsystem\SwitchLightRequest.java
 C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\LightingSystem\src\main\java\ds\lightingsystem\SetLightScheduleRequestOrBuilder.java
 C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\LightingSystem\src\main\java\ds\lightingsystem\SetLightScheduleResponseOrBuilder.java
 C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\LightingSystem\src\main\java\ds\lightingsystem\SwitchLightRequestOrBuilder.java
 C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\LightingSystem\src\main\java\ds\lightingsystem\SetLightScheduleRequest.java
+C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\LightingSystem\src\main\java\ds\lightingsystem\LightingSystemClient.java
 C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\LightingSystem\src\main\java\ds\lightingsystem\SetLightLevelsResponseOrBuilder.java
 C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\LightingSystem\src\main\java\ds\lightingsystem\SetLightLevelsRequest.java
 C:\Users\Mmesi\Desktop\Software Engineering\Distributed Systems\GRPCSmartCity\GRPCSmartCity\LightingSystem\src\main\java\ds\lightingsystem\SetLightScheduleResponse.java

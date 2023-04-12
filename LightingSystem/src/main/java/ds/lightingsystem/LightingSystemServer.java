@@ -1,9 +1,16 @@
 package ds.lightingsystem;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Properties;
+
+import javax.jmdns.JmDNS;
+import javax.jmdns.ServiceInfo;
 
 import ds.lightingsystem.LightingSystemGrpc.LightingSystemImplBase;
 import io.grpc.Server;
@@ -15,7 +22,13 @@ public class LightingSystemServer extends LightingSystemImplBase{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		LightingSystemServer LSserver = new LightingSystemServer();
-		int port = 50063;
+		Properties prop = LSserver.getProperties();
+		
+		LSserver.registerService(prop);
+		
+		int port = Integer.valueOf( prop.getProperty("service_port") );
+		
+		// port = 50063;
 		
 		try {
 			Server server = ServerBuilder.forPort(port).addService(LSserver).build().start();
@@ -30,6 +43,65 @@ public class LightingSystemServer extends LightingSystemImplBase{
 			e.printStackTrace();
 		}
 		
+	}
+private Properties getProperties() {
+		
+		Properties prop = null;		
+		
+		 try (InputStream input = new FileInputStream("src/main/resources/lightingsystem.properties")) {
+
+	            prop = new Properties();
+
+	            // load a properties file
+	            prop.load(input);
+
+	            // get the property value and print it out
+	            System.out.println("Lighting System Service properties ...");
+	            System.out.println("\t service_type: " + prop.getProperty("service_type"));
+	            System.out.println("\t service_name: " +prop.getProperty("service_name"));
+	            System.out.println("\t service_description: " +prop.getProperty("service_description"));
+		        System.out.println("\t service_port: " +prop.getProperty("service_port"));
+
+	        } catch (IOException ex) {
+	            ex.printStackTrace();
+	        }
+	
+		 return prop;
+	}
+	
+	
+	private  void registerService(Properties prop) {
+		
+		 try {
+	            // Create a JmDNS instance
+	            JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
+	            
+	            String service_type = prop.getProperty("service_type") ;//"_http._tcp.local.";
+	            String service_name = prop.getProperty("service_name")  ;// "example";
+	           // int service_port = 1234;
+	            int service_port = Integer.valueOf( prop.getProperty("service_port") );// #.50051;
+
+	            
+	            String service_description_properties = prop.getProperty("service_description")  ;//"path=index.html";
+	            
+	            // Register a service
+	            ServiceInfo serviceInfo = ServiceInfo.create(service_type, service_name, service_port, service_description_properties);
+	            jmdns.registerService(serviceInfo);
+	            
+	            System.out.printf("registering service with type %s and name %s \n", service_type, service_name);
+	            
+	            // Wait a bit
+	            Thread.sleep(1000);
+
+	            // Unregister all services
+	            //jmdns.unregisterAllServices();
+
+	        } catch (IOException e) {
+	            System.out.println(e.getMessage());
+	        } catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	}
 
 	public StreamObserver<SetLightLevelsRequest> setLightLevels(StreamObserver<SetLightLevelsResponse> responseObserver) {
@@ -104,63 +176,6 @@ public class LightingSystemServer extends LightingSystemImplBase{
 		    responseObserver.onCompleted();
 		}
 
-
-	/*public StreamObserver<SetLightScheduleRequest> setLightSchedule(StreamObserver<SetLightScheduleResponse> responseObserver) {
-	    return new StreamObserver<SetLightScheduleRequest>() {
-	        @Override
-	        public void onNext(SetLightScheduleRequest request) {
-	        	
-	    				System.out.println("Set Light Schedule of : "+ request.getSystemId() + " from: "+ request.getStartTime() + " to: "+ request.getEndTime() + "with an Intensity of: " +request.getIntensity());
-	    				
-	    				String converted =  Integer.toString(Integer.parseInt(msg.getNumC(), msg.getFromBase()), msg.getToBase());
-	    				
-	    				ConvertResponse reply = ConvertResponse.newBuilder().setNumber(converted).setBase(msg.getToBase()).build();
-	    				
-	    				responseObserver.onNext(reply);
-	    				
-	    			}
-
-	    			@Override
-	    			public void onError(Throwable t) {
-	    				
-	    				t.printStackTrace();
-	    				
-	    			}
-
-	    			@Override
-	    			public void onCompleted() {
-	    				System.out.println("receiving convertBase completed ");
-	    				
-	    				//completed too
-	    				responseObserver.onCompleted();
-	    			}
-	    			
-	    		};
-	    	}
-
-	    	
-	            // Create a response object to confirm receipt of the request
-	            SetLightScheduleResponse response = SetLightScheduleResponse.newBuilder().setMessage("Light schedule set successfully.").build();
-
-	            // Send the response back to the client
-	            responseObserver.onNext(response);
-	        }
-
-	        @Override
-	        public void onError(Throwable t) {
-	            // Handle any errors that might occur and send an error response back to the client
-	            responseObserver.onError(t);
-	        }
-
-	        @Override
-	        public void onCompleted() {
-	            // Signal the end of the response stream
-	            responseObserver.onCompleted();
-	        }
-	    };
-	}*/
-
-
 	    @Override
 	    public StreamObserver<SetLightScheduleRequest> setLightSchedule(StreamObserver<SetLightScheduleResponse> responseObserver) {
 	        return new StreamObserver<SetLightScheduleRequest>() {
@@ -171,7 +186,7 @@ public class LightingSystemServer extends LightingSystemImplBase{
 	            @Override
 	            public void onNext(SetLightScheduleRequest request) {
 	                // Create a new light schedule from the request
-	            	System.out.println("Setting Light Schedule of : "+ request.getSystemId() + " from: "+ request.getStartTime() + " to: "+ request.getEndTime() + "with an Intensity of: " +request.getIntensity());
+	            	System.out.println("Setting Light Schedule of : "+ request.getSystemId() + " from: "+ request.getStartTime() + " to: "+ request.getEndTime() + " with an Intensity of: " +request.getIntensity());
 	                LightSchedule schedule = new LightSchedule(request.getSystemId(), request.getStartTime(), request.getEndTime(), request.getIntensity());
 
 	                // Add the schedule to the list

@@ -94,7 +94,7 @@ public class EnergyMonitoringClient {
 			StreamObserver<EnergyUsageHistoryData> responseObserver = new StreamObserver<EnergyUsageHistoryData>() {
 	            @Override
 	            public void onNext(EnergyUsageHistoryData response) {
-	            	long date = TimeUnit.MILLISECONDS.toSeconds(response.getDateTime());
+	            	String date = String.valueOf(response.getDateTime());
 	                System.out.println("Energy usage Data from "+ date + " is " + response.getEnergyUsage() + "kWh");
 	            }
 
