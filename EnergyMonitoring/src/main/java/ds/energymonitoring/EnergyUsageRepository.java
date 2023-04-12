@@ -38,7 +38,16 @@ public class EnergyUsageRepository{
 
 	public List<EnergyUsageHistoryData> getEnergyUsageHistory(String deviceId) {
 		// TODO Auto-generated method stub
-		return null;
+		 List<EnergyUsageHistoryData> data = new ArrayList<>();
+	        for (int i = 0; i < 10; i++) {
+	            EnergyUsageHistoryData datum = EnergyUsageHistoryData.newBuilder()
+	                    .setDateTime(System.currentTimeMillis())
+	                    .setEnergyUsage((float) Math.random() * 100)
+	                    .build();
+	            data.add(datum);
+	        }
+	        return data;
+	    }
 	}
 
-}
+

@@ -90,7 +90,7 @@ public class EnergyMonitoringServer extends EnergyMonitoringImplBase{
 
 		    private float EnergyUsage(String sourceId, long startTime, long endTime) {
 		        
-		        return 1.0f;
+		        return (float) Math.random() * 100;
 		    
 		}
 
