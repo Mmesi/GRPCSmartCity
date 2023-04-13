@@ -16,18 +16,23 @@ import io.grpc.stub.StreamObserver;
 public class ApplianceOptimizationServer extends ApplicationOptimizationImplBase{
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// creating an instance of the server
 		ApplianceOptimizationServer AOserver = new ApplianceOptimizationServer();
-		//int port = 50058;
+
 		
-		
+		//Creating a Properties instance to retrieve the server properties
 		Properties prop = AOserver.getProperties();
 		
+		
+		//registering the service
 		AOserver.registerService(prop);
 		
+		
+		//retrieve the port number 
 		int port = Integer.valueOf( prop.getProperty("service_port"));
 		
 		try {
+			//starting the server
 			Server server = ServerBuilder.forPort(port).addService(AOserver).build().start();
 			System.out.println("Application Optimization Server started, listening on " + port);
 			server.awaitTermination();
@@ -41,6 +46,8 @@ public class ApplianceOptimizationServer extends ApplicationOptimizationImplBase
 		}
 		
 	}
+	
+//Definition of getProperties Method
 private Properties getProperties() {
 		
 		Properties prop = null;		
@@ -66,7 +73,7 @@ private Properties getProperties() {
 		 return prop;
 	}
 	
-	
+	//Definition of the registerService method
 	private  void registerService(Properties prop) {
 		
 		 try {
@@ -75,8 +82,8 @@ private Properties getProperties() {
 	            
 	            String service_type = prop.getProperty("service_type") ;//"_http._tcp.local.";
 	            String service_name = prop.getProperty("service_name")  ;// "example";
-	           // int service_port = 1234;
-	            int service_port = Integer.valueOf( prop.getProperty("service_port") );// #.50051;
+	   
+	            int service_port = Integer.valueOf( prop.getProperty("service_port") );;
 
 	            
 	            String service_description_properties = prop.getProperty("service_description")  ;//"path=index.html";
@@ -103,8 +110,12 @@ private Properties getProperties() {
 	}
 
 	@Override
+	
+	//Implementation of the unary rpc setApplianceMode method
 		public void setApplianceMode(SetApplianceModeRequest request, StreamObserver<SetApplianceModeResponse> responseObserver) {
-		    // Implement code to set the appliance mode based on the request parameters
+		    
+		
+		// Implementing code to set the appliance mode based on the request parameters
 			String applianceId = request.getApplianceId();
 		    String mode = request.getMode();
 		    String location = request.getLocation();
@@ -119,12 +130,16 @@ private Properties getProperties() {
 		    responseObserver.onNext(response);
 		    responseObserver.onCompleted();
 		}
+	
+	/*This method accepts the applianceId, mode to set the appliance and location. 
+	 * This is a mere simulation of the logic
+	 */
 	private boolean setApplianceModeLogic(String applianceId, String mode, String location) {
 	    System.out.println("Setting mode of appliance " + applianceId + " to " + mode + " in location " + location);
 	    return true;
 	}
 
-
+	//Implementation of the unary rpc setApplianceLimit method
 	@Override
 	public void setApplianceLimit(SetApplianceLimitRequest request, StreamObserver<SetApplianceLimitResponse> responseObserver) {
 	    // Implement code to set the appliance limit based on the request parameters
