@@ -197,9 +197,9 @@ private Properties getProperties() {
 	            }
 
 	            @Override
-	            public void onError(Throwable throwable) {
+	            public void onError(Throwable t) {
 	                // Log any errors
-	                System.out.println("Error in setLightSchedule: " + throwable.getMessage());
+	                System.out.println("Error in setLightSchedule: " + t.getMessage());
 	            }
 
 	            @Override

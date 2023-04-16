@@ -23,7 +23,9 @@ public class EnergyMonitoringServer extends EnergyMonitoringImplBase{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		EnergyMonitoringServer EMserver = new EnergyMonitoringServer();
-		//int port = 50070;
+		//int port = 
+
+		;
 		
 		Properties prop = EMserver.getProperties();
 		EMserver.registerService(prop);
@@ -78,7 +80,7 @@ private  void registerService(Properties prop) {
             
             String service_type = prop.getProperty("service_type") ;//"_http._tcp.local.";
             String service_name = prop.getProperty("service_name")  ;// "example";
-           // int service_port = 1234;
+           
             int service_port = Integer.valueOf( prop.getProperty("service_port") );// #.50051;
 
             
