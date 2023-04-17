@@ -1,3 +1,4 @@
+//GRAPHICAL USER INTERFACE FOR THE LIGHTINGSYSTEM SERVICE
 package ds.lightingsystem;
 
 import java.awt.BorderLayout;
@@ -6,8 +7,13 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Scanner;
+import java.net.InetAddress;
 
+
+import javax.jmdns.JmDNS;
+import javax.jmdns.ServiceEvent;
+import javax.jmdns.ServiceInfo;
+import javax.jmdns.ServiceListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -32,6 +38,9 @@ public class ClientGUI extends JFrame {
     private final JButton switchBtn;
     private final JButton scheduleBtn;
     private static JTextArea outputArea = new JTextArea();
+    static String host = "_lightingsystem._tcp.local.";
+	static int port;
+    static String resolvedIP;
 
     private static LightingSystemBlockingStub blockingStub;
     private static LightingSystemStub asyncStub;
@@ -71,7 +80,9 @@ public class ClientGUI extends JFrame {
         contentPane.add(scrollPane, BorderLayout.CENTER);
 
         // Set up stubs
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 50063).usePlaintext().build();
+        testClientJMDNS();
+         
+        ManagedChannel channel = ManagedChannelBuilder.forAddress(resolvedIP, port).usePlaintext().build();
         blockingStub = LightingSystemGrpc.newBlockingStub(channel);
         asyncStub = LightingSystemGrpc.newStub(channel);
         // Add listeners to buttons
@@ -261,6 +272,7 @@ requestObserver.onCompleted();
 		
 		Thread.sleep(5000);
 		
+		
 	} catch (RuntimeException e) {
 		e.printStackTrace();
 	} catch (InterruptedException e) {			
@@ -269,4 +281,40 @@ requestObserver.onCompleted();
 		
 	}
 
+    
+    private static class SampleListener implements ServiceListener {
+		public void serviceAdded(ServiceEvent event) {
+			System.out.println("Service added: " + event.getInfo());
+		}
+		public void serviceRemoved(ServiceEvent event) {
+			System.out.println("Service removed: " + event.getInfo());
+		}
+		@SuppressWarnings("deprecation")
+		public void serviceResolved(ServiceEvent event) {
+					System.out.println("Service resolved: " + event.getInfo());
+			
+                    ServiceInfo info = event.getInfo();
+                    port = info.getPort();
+                    resolvedIP = info.getHostAddress();                    
+                    System.out.println("IP Resolved - " + resolvedIP + ":" + port);
+		}
+	}
+	
+	public static void testClientJMDNS() {
+		try {
+			// Create a JmDNS instance
+			JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
+
+			// Add a service listener
+			jmdns.addServiceListener(host, new SampleListener());
+
+			// Wait a bit
+            Thread.sleep(20000);
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
 }
+

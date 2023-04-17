@@ -1,3 +1,4 @@
+//GRAPHICAL USER INTERFACE FOR THE ENERGYMONITORING SERVICE
 package ds.energymonitoring;
 
 import java.awt.BorderLayout;
@@ -6,8 +7,13 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.InetAddress;
 import java.util.Random;
 
+import javax.jmdns.JmDNS;
+import javax.jmdns.ServiceEvent;
+import javax.jmdns.ServiceInfo;
+import javax.jmdns.ServiceListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -26,12 +32,19 @@ import io.grpc.stub.StreamObserver;
 
 public class ClientGUI extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	JFrame frame = new JFrame();
     private final JLabel title;
     private final JButton usageBtn;
     private final JButton sourceBtn;
     private final JButton historyBtn;
     private static JTextArea outputArea = new JTextArea();
+    static String host = "_energymonitoring._tcp.local.";
+	static int port;
+    static String resolvedIP;
 
     private static EnergyMonitoringBlockingStub blockingStub;
     private static EnergyMonitoringStub asyncStub;
@@ -69,6 +82,8 @@ public class ClientGUI extends JFrame {
         contentPane.add(btnPanel, BorderLayout.WEST);
 
         contentPane.add(scrollPane, BorderLayout.CENTER);
+        
+        testClientJMDNS();
 
         // Set up stubs
         ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 50070).usePlaintext().build();
@@ -148,7 +163,7 @@ public class ClientGUI extends JFrame {
 
 		GetEnergyUsageResponse response = blockingStub.getEnergyUsage(req);
 
-		 updateOutput("Total: " + response.getTotalEnergyUsage() +  "\n Average: " + response.getAveragePowerConsumption());
+		 updateOutput("Total Energy Usage: " + response.getTotalEnergyUsage() +  "\n Average for period: " + response.getAveragePowerConsumption());
 
     }
 
@@ -239,4 +254,38 @@ public class ClientGUI extends JFrame {
 
 
 }
+    private static class SampleListener implements ServiceListener {
+		public void serviceAdded(ServiceEvent event) {
+			System.out.println("Service added: " + event.getInfo());
+		}
+		public void serviceRemoved(ServiceEvent event) {
+			System.out.println("Service removed: " + event.getInfo());
+		}
+		@SuppressWarnings("deprecation")
+		public void serviceResolved(ServiceEvent event) {
+					System.out.println("Service resolved: " + event.getInfo());
+			
+                    ServiceInfo info = event.getInfo();
+                    port = info.getPort();
+                    resolvedIP = info.getHostAddress();                    
+                    System.out.println("IP Resolved - " + resolvedIP + ":" + port);
+		}
+	}
+	
+	public static void testClientJMDNS() {
+		try {
+			// Create a JmDNS instance
+			JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
+
+			// Add a service listener
+			jmdns.addServiceListener(host, new SampleListener());
+
+			// Wait a bit
+            Thread.sleep(20000);
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
 }

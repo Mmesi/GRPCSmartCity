@@ -78,7 +78,7 @@ private Properties getProperties() {
 	            
 	            String service_type = prop.getProperty("service_type") ;//"_http._tcp.local.";
 	            String service_name = prop.getProperty("service_name")  ;// "example";
-	           // int service_port = 1234;
+	           
 	            int service_port = Integer.valueOf( prop.getProperty("service_port") );// #.50051;
 
 	            
@@ -93,8 +93,7 @@ private Properties getProperties() {
 	            // Wait a bit
 	            Thread.sleep(1000);
 
-	            // Unregister all services
-	            //jmdns.unregisterAllServices();
+	            
 
 	        } catch (IOException e) {
 	            System.out.println(e.getMessage());

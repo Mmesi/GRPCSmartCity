@@ -46,8 +46,11 @@ public class ApplianceOptimizationServer extends ApplicationOptimizationImplBase
 		}
 		
 	}
+
+/*Definition of getProperties Method which gets the service name, type, description and port number
+ * from the applianceoptimization properties file
+ */
 	
-//Definition of getProperties Method
 private Properties getProperties() {
 		
 		Properties prop = null;		
@@ -73,22 +76,24 @@ private Properties getProperties() {
 		 return prop;
 	}
 	
-	//Definition of the registerService method
+	//Definition of the registerService method 
 	private  void registerService(Properties prop) {
 		
 		 try {
 	            // Create a JmDNS instance
 	            JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
 	            
-	            String service_type = prop.getProperty("service_type") ;//"_http._tcp.local.";
-	            String service_name = prop.getProperty("service_name")  ;// "example";
+	            //retrieve the service type and service name
+	            String service_type = prop.getProperty("service_type") ;
+	            String service_name = prop.getProperty("service_name") ;
 	   
-	            int service_port = Integer.valueOf( prop.getProperty("service_port") );;
+	          //retrieve the port number
+	            int service_port = Integer.valueOf( prop.getProperty("service_port") );
 
-	            
+	            //get service description
 	            String service_description_properties = prop.getProperty("service_description")  ;//"path=index.html";
 	            
-	            // Register a service
+	            // Register the service
 	            ServiceInfo serviceInfo = ServiceInfo.create(service_type, service_name, service_port, service_description_properties);
 	            jmdns.registerService(serviceInfo);
 	            
@@ -97,8 +102,6 @@ private Properties getProperties() {
 	            // Wait a bit
 	            Thread.sleep(1000);
 
-	            // Unregister all services
-	            //jmdns.unregisterAllServices();
 
 	        } catch (IOException e) {
 	            System.out.println(e.getMessage());
@@ -112,6 +115,7 @@ private Properties getProperties() {
 	@Override
 	
 	//Implementation of the unary rpc setApplianceMode method
+	
 		public void setApplianceMode(SetApplianceModeRequest request, StreamObserver<SetApplianceModeResponse> responseObserver) {
 		    
 		
@@ -120,10 +124,14 @@ private Properties getProperties() {
 		    String mode = request.getMode();
 		    String location = request.getLocation();
 		    System.out.println("Setting appliance mode to " + mode + "...");
+		    
+		    
+		    //passing the given parameters to the Logic where the appliance is identified and turned on
 		    boolean status = setApplianceModeLogic(applianceId, mode, location);
+		    
 
 		    // Create a response object to confirm the mode change
-		    SetApplianceModeResponse response = SetApplianceModeResponse.newBuilder().setStatus(status).setMessage(status ? "Appliance mode set successfully" : "Failed to set appliance mode")
+		    SetApplianceModeResponse response = SetApplianceModeResponse.newBuilder().setStatus(status).setMessage(status ? "Appliance mode for " +applianceId+ " set to "+ mode + " successfully" : "Failed to set appliance mode")
 	                .build();
 
 		    // Send the response back to the client
@@ -142,7 +150,7 @@ private Properties getProperties() {
 	//Implementation of the unary rpc setApplianceLimit method
 	@Override
 	public void setApplianceLimit(SetApplianceLimitRequest request, StreamObserver<SetApplianceLimitResponse> responseObserver) {
-	    // Implement code to set the appliance limit based on the request parameters
+	    // Implementing code to set the appliance limit based on the request parameters
 	    int limit = (int) request.getLimit();
 	    System.out.println("Setting appliance limit to " + limit + "...");
 
@@ -158,21 +166,27 @@ private Properties getProperties() {
 
 
 	@Override
+	//Implementation of the bidirectional rpc setApplianceSchedule method
 	public StreamObserver<SetApplianceScheduleRequest> setApplianceSchedule(StreamObserver<SetApplianceScheduleResponse> responseObserver) {
 	    return new StreamObserver<SetApplianceScheduleRequest>() {
-	        private StringBuilder messageBuilder = new StringBuilder("");
+	    	
+	    	
+	        private StringBuilder messageBuilder = new StringBuilder("");//message that relays the result of each entry in the server streaming
 	        private int count = 0;
 	        
 	        @Override
 	        public void onNext(SetApplianceScheduleRequest request) {
-	            // Implement code to set the appliance schedule based on the request parameters
+	        	
+	            // Implementing code to set the appliance schedule based on the request parameters
 	        	String applianceId = request.getApplianceId();
 	            int startTime = (int) request.getStartTime();
 	            int endTime = (int) request.getEndTime();
+	            
+	            //Print the activity to the console
 	            System.out.println("Setting " + applianceId + " schedule from " + startTime + " to " + endTime + "...");
 	            
 	            // Append the schedule information to the response message
-	            if (count > 0) {
+	            if (count > -1) {
 	                messageBuilder.append("Appliance schedule for " +applianceId + " set");
 	            }
 	            messageBuilder.append(": from ").append(startTime).append(" to ").append(endTime+"\n");
@@ -181,12 +195,14 @@ private Properties getProperties() {
 
 	        @Override
 	        public void onError(Throwable t) {
-	            // Handle errors
+	            // Handle errors that stems from setting the schedule
 	            System.err.println("Error in setting appliance schedule: " + t.getMessage());
 	        }
 
 	        @Override
 	        public void onCompleted() {
+	        	
+	        	
 	            // Create a response object to confirm the schedule change
 	            SetApplianceScheduleResponse response = SetApplianceScheduleResponse.newBuilder()
 	                .setMessage(messageBuilder.toString())

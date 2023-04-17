@@ -1,5 +1,10 @@
+//GRAPHICAL USER INTERFACE FOR THE APPLIANCEOPTIMIZATION SERVICE
 package ds.applicationoptimization;
 
+import javax.jmdns.JmDNS;
+import javax.jmdns.ServiceEvent;
+import javax.jmdns.ServiceInfo;
+import javax.jmdns.ServiceListener;
 import javax.swing.*;
 
 import ds.applicationoptimization.ApplianceOptimizationGrpc.ApplicationOptimizationBlockingStub;
@@ -11,16 +16,26 @@ import io.grpc.stub.StreamObserver;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.InetAddress;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class ClientGUI extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	JFrame frame = new JFrame();
     private final JLabel title;
     private final JButton modeBtn;
     private final JButton limitBtn;
     private final JButton scheduleBtn;
     private static JTextArea outputArea = new JTextArea();
+    static String host = "_applianceoptimation._tcp.local.";
+	static int port;
+    static String resolvedIP;
+    static ArrayList<String> appliances = new ArrayList<>();
 
     private static ApplicationOptimizationBlockingStub blockingStub;
     private static ApplicationOptimizationStub asyncStub;
@@ -98,13 +113,13 @@ public class ClientGUI extends JFrame {
     public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		//stubs -- generate from protO
+		//starting the interface
     	ClientGUI gui = new ClientGUI();
     	gui.frame.setVisible(true);
 					
 
 	}
-	// Method to update output area with text
+	// Method to update output area of the USer Interface with text
     static void updateOutput(String text) {
         outputArea.append(text + "\n");
         outputArea.setCaretPosition(outputArea.getDocument().getLength());
@@ -112,11 +127,32 @@ public class ClientGUI extends JFrame {
 
     // Unary RPC to set appliance mode
     static void setApplianceMode() {
-        String applianceId = JOptionPane.showInputDialog("Enter Appliance ID:");
+    	String applianceId ="";
+    	String location = "";
+    	do {   	
+    		applianceId = JOptionPane.showInputDialog("Enter Appliance ID:");
+			try{
+				if(applianceId.length() == 0){
+					throw new InvalidEntryException();//if appliance name is not given
+			}
+		}catch (InvalidEntryException e) {
+			    JOptionPane.showMessageDialog(null, e.getMessage());//print error message
+			}
+		}while(applianceId.length()==0);
         String[] choices = { "ECO", "ENERGY SAVING", "ON", "OFF"};
         String mode = (String) JOptionPane.showInputDialog(null, "Choose Mode...",
             "", JOptionPane.QUESTION_MESSAGE, null, choices,choices[0]);
-        String location = JOptionPane.showInputDialog("Enter Location:");
+        do {
+        location = JOptionPane.showInputDialog("Enter Location:");
+        try {
+        	if(location.length() == 0) {
+        		throw new InvalidEntryException();
+        	}
+        }
+        	catch (InvalidEntryException e) {
+			    JOptionPane.showMessageDialog(null, e.getLocationmessage());//print error message
+			}
+		}while(location.length()==0);
 
         SetApplianceModeRequest req = SetApplianceModeRequest.newBuilder()
                 .setApplianceId(applianceId)
@@ -131,8 +167,19 @@ public class ClientGUI extends JFrame {
 
     // Unary RPC to set appliance limit
     static void setApplianceLimit() {
-        String applianceId = JOptionPane.showInputDialog("Enter Appliance ID:");
-        String limitString = JOptionPane.showInputDialog("Enter Limit:");
+    	String applianceId = "";
+        do{
+        	applianceId = JOptionPane.showInputDialog("Enter Appliance ID:");
+        	try {
+        		if(applianceId.length()==0) {
+        			throw new InvalidEntryException();
+        		}
+        	}
+        	catch(InvalidEntryException e) {
+        		JOptionPane.showMessageDialog(null, e.getMessage());
+        	}
+        }while(applianceId.length()==0);
+        String limitString = JOptionPane.showInputDialog("Enter Limit in Kwh:");
         
         try {
             float limit = Float.parseFloat(limitString);
@@ -147,15 +194,43 @@ public class ClientGUI extends JFrame {
     }
     static void setApplianceSchedule() {
 		// TODO Auto-generated method stub
-    	
-			String applianceId = JOptionPane.showInputDialog("Enter Appliance ID:");
+    	ArrayList<Long> startTimes = new ArrayList<>();
+    	ArrayList<Long> endTimes = new ArrayList<>();
+    	int pointer = 1;
+    	int result;
+    	String applianceId;
+    	do
+    		{
+    		do {   	
+			applianceId = JOptionPane.showInputDialog("Enter ID for Appliance " + pointer+ ":");
+			try{
+				if(applianceId.length() == 0){
+					throw new InvalidEntryException();//if appliance names is not given
+			}
+		}catch (InvalidEntryException e) {
+			    JOptionPane.showMessageDialog(null, e.getMessage());//print error message
+			}
+		}while(applianceId.length()==0);
+			appliances.add(applianceId);
+			pointer++;
+			String[] options = {"Add New Appliance", "Proceed"};
+
+	        result = JOptionPane.showOptionDialog(
+	                null,
+	                "Do you wish to add another Appliance:",
+	                "Selection Option",
+	                JOptionPane.DEFAULT_OPTION,
+	                JOptionPane.INFORMATION_MESSAGE,
+	                null,
+	                options,
+	                options[0]);
 			
-			StreamObserver<SetApplianceScheduleResponse> responseObserver = new StreamObserver<SetApplianceScheduleResponse>() {
-				int count =0 ;
+    	} while(result==0);    	
+			
+		StreamObserver<SetApplianceScheduleResponse> responseObserver = new StreamObserver<SetApplianceScheduleResponse>() {
 			@Override
 			public void onNext(SetApplianceScheduleResponse value) {
 				updateOutput("Message: " + value.getMessage());
-				count += 1;
 			}
 
 			@Override
@@ -165,10 +240,10 @@ public class ClientGUI extends JFrame {
 			}
 			@Override
 			public void onCompleted() {
-				System.out.println("Appliance Scheduling Completed ");
-			}
-			
+				updateOutput("Appliance Scheduling Completed ");
+			}		
 		};
+	
 
 		try {
 			Thread.sleep(15000);
@@ -178,14 +253,13 @@ public class ClientGUI extends JFrame {
 		}
 		StreamObserver<SetApplianceScheduleRequest> requestObserver = asyncStub.setApplianceSchedule(responseObserver);
 		try {
-
-			requestObserver.onNext(SetApplianceScheduleRequest.newBuilder().setApplianceId("refridgerator").setStartTime(10000).setEndTime(200000).build());
-			requestObserver.onNext(SetApplianceScheduleRequest.newBuilder().setApplianceId("microwave").setStartTime(10000).setEndTime(200000).build());
-			requestObserver.onNext(SetApplianceScheduleRequest.newBuilder().setApplianceId("dishwasher").setStartTime(10000).setEndTime(200000).build());
-			requestObserver.onNext(SetApplianceScheduleRequest.newBuilder().setApplianceId("Air-conditioner").setStartTime(10000).setEndTime(200000).build());
-			requestObserver.onNext(SetApplianceScheduleRequest.newBuilder().setApplianceId("dryer").setStartTime(10000).setEndTime(200000).build());
-
-
+			int count = 0;
+			do {
+			updateOutput(appliances.get(count));
+			requestObserver.onNext(SetApplianceScheduleRequest.newBuilder().setApplianceId(appliances.get(count)).setStartTime(10000).setEndTime(200000).build());
+			count++;
+			} while(count<appliances.size());
+			
 			// Mark the end of requests
 			requestObserver.onCompleted();
 
@@ -199,8 +273,44 @@ public class ClientGUI extends JFrame {
 		} catch (InterruptedException e) {			
 			e.printStackTrace();
 		}
+    }
 
+    private static class SampleListener implements ServiceListener {
+		public void serviceAdded(ServiceEvent event) {
+			System.out.println("Service added: " + event.getInfo());
+		}
+		public void serviceRemoved(ServiceEvent event) {
+			System.out.println("Service removed: " + event.getInfo());
+		}
+		@SuppressWarnings("deprecation")
+		public void serviceResolved(ServiceEvent event) {
+					System.out.println("Service resolved: " + event.getInfo());
+			
+                    ServiceInfo info = event.getInfo();
+                    port = info.getPort();
+                    resolvedIP = info.getHostAddress();                    
+                    System.out.println("IP Resolved - " + resolvedIP + ":" + port);
+		}
+	}
+	
+	public static void testClientJMDNS() {
+		try {
+			// Create a JmDNS instance
+			JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
+
+			// Add a service listener
+			jmdns.addServiceListener(host, new SampleListener());
+
+			// Wait a bit
+            Thread.sleep(20000);
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
 	}
 		
-	}  
+	}
+
+
        
