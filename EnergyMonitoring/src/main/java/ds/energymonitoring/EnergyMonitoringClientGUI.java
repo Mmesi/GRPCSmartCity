@@ -23,14 +23,14 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 import ds.energymonitoring.EnergyMonitoringGrpc;
-import ds.energymonitoring.ClientGUI;
+import ds.energymonitoring.EnergyMonitoringClientGUI;
 import ds.energymonitoring.EnergyMonitoringGrpc.EnergyMonitoringBlockingStub;
 import ds.energymonitoring.EnergyMonitoringGrpc.EnergyMonitoringStub;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
 
-public class ClientGUI extends JFrame {
+public class EnergyMonitoringClientGUI extends JFrame {
 
 	/**
 	 * 
@@ -42,17 +42,18 @@ public class ClientGUI extends JFrame {
     private final JButton sourceBtn;
     private final JButton historyBtn;
     private static JTextArea outputArea = new JTextArea();
-    static String host = "_energymonitoring._tcp.local.";
+    static String host = "_energymonitoring._tcp.local.";//host DNS Address
 	static int port;
     static String resolvedIP;
 
+  //Declaring the stubs
     private static EnergyMonitoringBlockingStub blockingStub;
     private static EnergyMonitoringStub asyncStub;
     
     
     
 
-    public ClientGUI() {
+    public EnergyMonitoringClientGUI() {
 
         super("Energy Monitoring Client");
 
@@ -60,6 +61,7 @@ public class ClientGUI extends JFrame {
         title = new JLabel("Energy Usage Monitoring Client");
         title.setFont(new Font("Arial", Font.BOLD, 20));
 
+        //Adding buttons for the 3 methods
         usageBtn = new JButton("Retrieve Energy Usage");
         sourceBtn = new JButton("Retrieve Energy Usage by Source(Gas/Electricity");
         historyBtn = new JButton("Retrieve Energy Usage History Data");
@@ -69,11 +71,13 @@ public class ClientGUI extends JFrame {
         JScrollPane scrollPane = new JScrollPane(outputArea);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
-        // Add GUI components to JFrame
+        // Adding GUI components to JFrame
         Container contentPane = getContentPane();
         contentPane.setLayout(new BorderLayout());
         contentPane.add(title, BorderLayout.NORTH);
 
+        
+        //Creating and defining a Panel and Adding the buttons
         JPanel btnPanel = new JPanel();
         btnPanel.setLayout(new GridLayout(3, 1));
         btnPanel.add(usageBtn);
@@ -83,16 +87,19 @@ public class ClientGUI extends JFrame {
 
         contentPane.add(scrollPane, BorderLayout.CENTER);
         
-        testClientJMDNS();
-
-        // Set up stubs
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 50070).usePlaintext().build();
-        blockingStub = EnergyMonitoringGrpc.newBlockingStub(channel);
-        asyncStub = EnergyMonitoringGrpc.newStub(channel);
-        // Add listeners to buttons
+        //method call to resolve and retrieve the IP Address and Port number
+        testClientJMDNS();        
+        
+        
+        // Adding listeners to buttons
         usageBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+            	//calling the getEnergyUsage Method when button is clicked
+            	// Set up stubs
+                ManagedChannel channel = ManagedChannelBuilder.forAddress(resolvedIP, port).usePlaintext().build();
+                blockingStub = EnergyMonitoringGrpc.newBlockingStub(channel);
+                asyncStub = EnergyMonitoringGrpc.newStub(channel);
                 getEnergyUsage();
                 channel.shutdown();
             }
@@ -101,6 +108,11 @@ public class ClientGUI extends JFrame {
         sourceBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+            	// Set up stubs
+                ManagedChannel channel = ManagedChannelBuilder.forAddress(resolvedIP, port).usePlaintext().build();
+                blockingStub = EnergyMonitoringGrpc.newBlockingStub(channel);
+                asyncStub = EnergyMonitoringGrpc.newStub(channel);
+            	//calling the getEnergyUsageBySource Method when button is clicked
                 getEnergyUsageBySource();
                 channel.shutdown();
             }
@@ -109,23 +121,30 @@ public class ClientGUI extends JFrame {
         historyBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+            	// Set up stubs
+                ManagedChannel channel = ManagedChannelBuilder.forAddress(resolvedIP, port).usePlaintext().build();
+                blockingStub = EnergyMonitoringGrpc.newBlockingStub(channel);
+                asyncStub = EnergyMonitoringGrpc.newStub(channel);
+            	//Calling the getEnergyUsageHistory Method when button is clicked
                 getEnergyUsageHistory();
                 channel.shutdown();
             }
         });
 
-        // Set JFrame properties
+        // Setting the JFrame properties
         setSize(600, 500);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
     
+    
+    //Main Method
     public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		//stubs -- generate from protO
-    	ClientGUI gui = new ClientGUI();
+    	
+    	//Starting the Interface
+    	EnergyMonitoringClientGUI gui = new EnergyMonitoringClientGUI();
     	gui.frame.setVisible(true);
 					
 
@@ -136,14 +155,34 @@ public class ClientGUI extends JFrame {
         outputArea.setCaretPosition(outputArea.getDocument().getLength());
     }
 
-    // Unary RPC to set appliance mode
+    // Implementation of Unary RPC to get Energy Usage mode
     static void getEnergyUsage() {
-        String deviceId = JOptionPane.showInputDialog("Enter Device ID:");
+        String deviceId = "";//initializing deviceId
+        
+        //Error Handling for wrong input for deviceId 
+        do{
+        	deviceId = JOptionPane.showInputDialog("Enter Device ID:");
+        	try{
+        		
+        		if(deviceId.length()==0) {
+        			throw new InvalidEntryException();
+        		}
+        	}
+        	catch(InvalidEntryException e){
+        		JOptionPane.showMessageDialog(null, e.getMessage());
+        	}
+        }while(deviceId.length()==0);
+        
+        //Reading in the StartTime and EndTime as String
         String startTimeString = JOptionPane.showInputDialog("Enter Start Time of Energy Usage:");
         String endTimeString = JOptionPane.showInputDialog("Enter End Time of Energy Usage:");
-        long startTime = 0;
-        long endTime = 0;
         
+        
+        long startTime = 0;//initializing the startTime
+        long endTime = 0;//Initializing the endTime
+        
+        
+        //Error handling to ensure that entries for both startTime and endTime are values
         try {
         	startTime = Long.parseLong(startTimeString);
         }
@@ -159,25 +198,35 @@ public class ClientGUI extends JFrame {
         	return;
         }
         
+        
+        //Sending request to the server 
         GetEnergyUsageRequest req = GetEnergyUsageRequest.newBuilder().setDeviceId(deviceId).setStartTime(startTime).setEndTime(endTime).build();
-
+        
+        //Receiving the response from the server
 		GetEnergyUsageResponse response = blockingStub.getEnergyUsage(req);
-
+		
+		//Outputting the result to the console
 		 updateOutput("Total Energy Usage: " + response.getTotalEnergyUsage() +  "\n Average for period: " + response.getAveragePowerConsumption());
 
     }
 
-    // Unary RPC to set appliance limit
+    // Implementation of the server streaming method getEnergyUsageBySource
     static void getEnergyUsageBySource() {
     	String[] choices = { "GAS", "ELECTRICITY"};
+    	
+    	//Reading the sourceID from a dropdown list
         String sourceId= (String) JOptionPane.showInputDialog(null, "What Energy Source Data do you wish to Retrieve?",
             "", JOptionPane.QUESTION_MESSAGE, null, choices,choices[0]);
+        
+      //Reading in the StartTime and EndTime as String
     	String startTimeString = JOptionPane.showInputDialog("Enter Start Time: ");
         String endTimeString = JOptionPane.showInputDialog("Enter End Time: ");
-        long startTime = 0;
-        long endTime = 0;
         
         
+        long startTime = 0;//initializing the startTime
+        long endTime = 0;//Initializing the endTime
+        
+      //Error handling to ensure that entries for both startTime and endTime are values
         try {
             startTime = Long.parseLong(startTimeString);           
     		
@@ -192,8 +241,12 @@ public class ClientGUI extends JFrame {
             updateOutput("Invalid input for End Time.");
             return;
         }
+        
+        //Sending request to the server
         UsageBySourceRequest req = UsageBySourceRequest.newBuilder().setSourceId(sourceId).setStartTime(startTime).setEndTime(endTime).build();
 	       
+        
+        //Receiving response from the server
         StreamObserver<UsageBySourceResponse> responseObserver = new StreamObserver<UsageBySourceResponse>() {
         	@Override
             public void onNext(UsageBySourceResponse response) {
@@ -218,15 +271,31 @@ public class ClientGUI extends JFrame {
 		}
     }
     
-    
+   //Implementation of the server stream method- get Energy Usage History 
     static void getEnergyUsageHistory() {
 		// TODO Auto-generated method stub
     	
-    	String deviceId = JOptionPane.showInputDialog("Enter Device ID:");
+    	String deviceId = "";//Initializing the deviceID
+    	
+    	//Error Handling for wrong input for deviceId 
+        do{
+        	deviceId = JOptionPane.showInputDialog("Enter Device ID:");
+        	try{
+        		
+        		if(deviceId.length()==0) {
+        			throw new InvalidEntryException();
+        		}
+        	}
+        	catch(InvalidEntryException e){
+        		JOptionPane.showMessageDialog(null, e.getMessage());
+        	}
+        }while(deviceId.length()==0);
 			
     	GetEnergyUsageHistoryRequest request = GetEnergyUsageHistoryRequest.newBuilder()
                 .setDeviceId(deviceId)
                 .build();
+    	
+    //Receiving the Stream Response from the Server
 	StreamObserver<EnergyUsageHistoryData> responseObserver = new StreamObserver<EnergyUsageHistoryData>() {
         @Override
         public void onNext(EnergyUsageHistoryData response) {
@@ -235,6 +304,7 @@ public class ClientGUI extends JFrame {
         }
 
         @Override
+        //Error Handling
         public void onError(Throwable t) {
             System.err.println("EnergyMonitoringClient error: " + t.getMessage());
         }
@@ -254,6 +324,8 @@ public class ClientGUI extends JFrame {
 
 
 }
+    
+  //Service Listener that derives IP and Port number based on the DNS Address
     private static class SampleListener implements ServiceListener {
 		public void serviceAdded(ServiceEvent event) {
 			System.out.println("Service added: " + event.getInfo());
@@ -271,7 +343,9 @@ public class ClientGUI extends JFrame {
                     System.out.println("IP Resolved - " + resolvedIP + ":" + port);
 		}
 	}
-	
+    
+    
+	//Creating and adding the service using JMDNS
 	public static void testClientJMDNS() {
 		try {
 			// Create a JmDNS instance

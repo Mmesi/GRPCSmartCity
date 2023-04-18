@@ -21,17 +21,23 @@ import io.grpc.stub.StreamObserver;
 public class EnergyMonitoringServer extends EnergyMonitoringImplBase{
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
+		// creating an instance of the server
 		EnergyMonitoringServer EMserver = new EnergyMonitoringServer();
-		//int port = 
 
-		;
 		
+		//Creating a Properties instance to retrieve the server properties
 		Properties prop = EMserver.getProperties();
+		
+		//registering the service
 		EMserver.registerService(prop);
+		
+		
+		//retrieving the port number 
 		int port = Integer.valueOf( prop.getProperty("service_port") );
 		
 		try {
+			//starting the server
 			Server server = ServerBuilder.forPort(port).addService(EMserver).build().start();
 			System.out.println("Energy Monitoring Server started, listening on " + port);
 			server.awaitTermination();
@@ -45,7 +51,8 @@ public class EnergyMonitoringServer extends EnergyMonitoringImplBase{
 		}
 		
 	}
-	
+
+	//Definition of the registerService method
 private Properties getProperties() {
 	
 	Properties prop = null;		

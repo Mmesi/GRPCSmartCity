@@ -20,17 +20,24 @@ import io.grpc.stub.StreamObserver;
 public class LightingSystemServer extends LightingSystemImplBase{
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		// creating an instance of the server
 		LightingSystemServer LSserver = new LightingSystemServer();
+		
+		//Creating a Properties instance to retrieve the server properties
 		Properties prop = LSserver.getProperties();
 		
+		
+		
+		//registering the service
 		LSserver.registerService(prop);
 		
-		int port = Integer.valueOf( prop.getProperty("service_port") );
+		int port = Integer.valueOf( prop.getProperty("service_port") );// port = 50063;
 		
-		// port = 50063;
+		
 		
 		try {
+			//starting the server
 			Server server = ServerBuilder.forPort(port).addService(LSserver).build().start();
 			System.out.println("Lighting System Server started, listening on " + port);
 			server.awaitTermination();
@@ -44,15 +51,19 @@ public class LightingSystemServer extends LightingSystemImplBase{
 		}
 		
 	}
+	
+	/*Definition of getProperties Method which gets the service name, type, description and port number
+	 * from the lightingsystem properties file
+	 */
 private Properties getProperties() {
 		
 		Properties prop = null;		
 		
-		 try (InputStream input = new FileInputStream("src/main/resources/lightingsystem.properties")) {
+		 try (InputStream input = new FileInputStream("src/main/resources/lightingsystem.properties")) {//read the file that contains the properties
 
 	            prop = new Properties();
 
-	            // load a properties file
+	            // loading a properties file
 	            prop.load(input);
 
 	            // get the property value and print it out
@@ -69,7 +80,7 @@ private Properties getProperties() {
 		 return prop;
 	}
 	
-	
+	//Definition of the registerService method
 	private  void registerService(Properties prop) {
 		
 		 try {
@@ -79,12 +90,12 @@ private Properties getProperties() {
 	            String service_type = prop.getProperty("service_type") ;//"_http._tcp.local.";
 	            String service_name = prop.getProperty("service_name")  ;// "example";
 	           
-	            int service_port = Integer.valueOf( prop.getProperty("service_port") );// #.50051;
+	            int service_port = Integer.valueOf( prop.getProperty("service_port") );// #50063;
 
 	            
-	            String service_description_properties = prop.getProperty("service_description")  ;//"path=index.html";
+	            String service_description_properties = prop.getProperty("service_description") ;
 	            
-	            // Register a service
+	            // Register the service
 	            ServiceInfo serviceInfo = ServiceInfo.create(service_type, service_name, service_port, service_description_properties);
 	            jmdns.registerService(serviceInfo);
 	            
@@ -103,22 +114,24 @@ private Properties getProperties() {
 			}
 	}
 
+	
+	//Implementing the CLIENT STREAMING method- setLightLevels
 	public StreamObserver<SetLightLevelsRequest> setLightLevels(StreamObserver<SetLightLevelsResponse> responseObserver) {
 	    return new StreamObserver<SetLightLevelsRequest>() {
-	    	
-	    	 private float intensitySum = 0;
-	         private int numRequests = 0;
-	         String systemId = "";
-	         float intensity = 0;
+	         String systemId = "";//systemid 
+	         float intensity = 0;//intensity 
+	         boolean success = false;//Variable that stores the status
 	        
+	         
+	    //method call for every input in the client streaming
 	        @Override
 	        public void onNext(SetLightLevelsRequest request) {
 	        	systemId = request.getSystemId();
-	        	intensity = request.getIntensity();
-	        	intensitySum += request.getIntensity();
-	            numRequests++;	            
+	        	intensity = request.getIntensity();            
 	            System.out.println("Light System with ID: " + systemId +" to be set to an intensity of " + intensity);
-	   	            // Send the response back to the client
+	   	            
+	         // call the logic method to set the light levels
+	            success = setLightLevelsLogic(systemId, intensity);
 	        }
 
 	        @Override
@@ -131,34 +144,34 @@ private Properties getProperties() {
 
 	        @Override
 	        public void onCompleted() {
-	        	// compute the average intensity from all requests
-	            float averageIntensity = intensitySum / numRequests;
-
-	            // call the logic method to set the light levels
-	            boolean success = setLightLevelsLogic(systemId, averageIntensity);
-
-	            // send a response based on the result of the operation
+	        	
+	              // send a response based on the result of the operation
 	            responseObserver.onNext(SetLightLevelsResponse.newBuilder()
 	                .setStatus(success)
-	                .setMessage(success ? "Light levels set successfully" : "Failed to set light levels")
+	                .setMessage(success ? "Light levels set successfully" : "Failed to set light levels for all systems")
 	                .build());
 	            responseObserver.onCompleted();
 	        }
 	    };
 	}
+	
+	//Method that sets the light levels for a given system with a given intensity.
+	//This is just a simulation
 	private boolean setLightLevelsLogic(String systemId, float intensity){
 		
-		//System.out.println("Light Level" + systemId +" to be set to an intensity of" + intensity);
+		System.out.println("Light Level" + systemId +" to be set to an intensity of" + intensity);
 		
 		return true;
 	}
 	
 	
-
+	//Implementing the UNARY method- switchLight
 	@Override
 	public void switchLight(SwitchLightRequest request, StreamObserver<SwitchLightResponse> responseObserver) {
 		
-		    boolean lightState = request.getStatus();
+		    boolean lightState = request.getStatus();//variable that stores the status of light
+		    
+		    //logic that turns light on or off. This just returns a String.
 		    if (lightState) {
 		        System.out.println("Switching light on...");
 		    } else {
@@ -174,7 +187,10 @@ private Properties getProperties() {
 		    responseObserver.onNext(response);
 		    responseObserver.onCompleted();
 		}
-
+	
+	
+	
+	//Implementing the CLIENT STREAMING method- setLightSchedule
 	    @Override
 	    public StreamObserver<SetLightScheduleRequest> setLightSchedule(StreamObserver<SetLightScheduleResponse> responseObserver) {
 	        return new StreamObserver<SetLightScheduleRequest>() {
@@ -203,9 +219,7 @@ private Properties getProperties() {
 
 	            @Override
 	            public void onCompleted() {
-	                // TODO: Implement logic to set the light schedules
-
-	                // Send the response to the client
+	                 // Send the response to the client
 	                SetLightScheduleResponse response = SetLightScheduleResponse.newBuilder()
 	                        .setStatus(true)
 	                        .setMessage("Light schedules have been set.")

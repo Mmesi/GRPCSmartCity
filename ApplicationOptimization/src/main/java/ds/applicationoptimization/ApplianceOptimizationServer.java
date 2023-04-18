@@ -55,11 +55,11 @@ private Properties getProperties() {
 		
 		Properties prop = null;		
 		
-		 try (InputStream input = new FileInputStream("src/main/resources/applianceoptimization.properties")) {
+		 try (InputStream input = new FileInputStream("src/main/resources/applianceoptimization.properties")) {//read the file that contains the properties
 
 	            prop = new Properties();
 
-	            // load a properties file
+	            // loading a properties file
 	            prop.load(input);
 
 	            // get the property value and print it out

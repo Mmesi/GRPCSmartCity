@@ -32,14 +32,15 @@ import io.grpc.stub.StreamObserver;
 
 public class ClientGUI extends JFrame {
 
+	//Declaring Variables
 	JFrame frame = new JFrame();
     private final JLabel title;
     private final JButton levelsBtn;
     private final JButton switchBtn;
     private final JButton scheduleBtn;
     private static JTextArea outputArea = new JTextArea();
-    static String host = "_lightingsystem._tcp.local.";
-	static int port;
+    static String host = "_lightingsystem._tcp.local.";//host DNS Address
+	static int port;//port number
     static String resolvedIP;
 
     private static LightingSystemBlockingStub blockingStub;
@@ -70,6 +71,7 @@ public class ClientGUI extends JFrame {
         contentPane.setLayout(new BorderLayout());
         contentPane.add(title, BorderLayout.NORTH);
 
+      //Creating and defining a Panel and Adding the buttons
         JPanel btnPanel = new JPanel();
         btnPanel.setLayout(new GridLayout(3, 1));
         btnPanel.add(levelsBtn);
@@ -79,16 +81,19 @@ public class ClientGUI extends JFrame {
 
         contentPane.add(scrollPane, BorderLayout.CENTER);
 
-        // Set up stubs
+        //method call to resolve and retrieve the IP Address and Port number
         testClientJMDNS();
-         
-        ManagedChannel channel = ManagedChannelBuilder.forAddress(resolvedIP, port).usePlaintext().build();
-        blockingStub = LightingSystemGrpc.newBlockingStub(channel);
-        asyncStub = LightingSystemGrpc.newStub(channel);
+          
+        
         // Add listeners to buttons
         levelsBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+            	// Set up stubs
+                ManagedChannel channel = ManagedChannelBuilder.forAddress(resolvedIP, port).usePlaintext().build();
+                blockingStub = LightingSystemGrpc.newBlockingStub(channel);
+                asyncStub = LightingSystemGrpc.newStub(channel);
+            	//calling the set Light Levels Method when button is clicked
                 setLightLevels();
                 channel.shutdown();
             }
@@ -99,6 +104,11 @@ public class ClientGUI extends JFrame {
         switchBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+            	// Set up stubs
+                ManagedChannel channel = ManagedChannelBuilder.forAddress(resolvedIP, port).usePlaintext().build();
+                blockingStub = LightingSystemGrpc.newBlockingStub(channel);
+                asyncStub = LightingSystemGrpc.newStub(channel);
+            	//calling the switch Light Method when button is clicked
                 switchLight();
                 channel.shutdown();
             }
@@ -107,6 +117,11 @@ public class ClientGUI extends JFrame {
         scheduleBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+            	// Set up stubs
+                ManagedChannel channel = ManagedChannelBuilder.forAddress(resolvedIP, port).usePlaintext().build();
+                blockingStub = LightingSystemGrpc.newBlockingStub(channel);
+                asyncStub = LightingSystemGrpc.newStub(channel);
+            	//calling the set Light Schedule Method when button is clicked
                 setLightSchedule();
                 channel.shutdown();
             }
@@ -124,7 +139,7 @@ public class ClientGUI extends JFrame {
     public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		//stubs -- generate from protO
+		
     	ClientGUI gui = new ClientGUI();
     	gui.frame.setVisible(true);
 					

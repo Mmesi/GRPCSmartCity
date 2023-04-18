@@ -20,9 +20,9 @@ import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class ClientGUI extends JFrame {
+public class ApplianceOptimizationClientGUI extends JFrame {
 
-	/**
+	/**Declaring and Initializing variables
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
@@ -32,18 +32,19 @@ public class ClientGUI extends JFrame {
     private final JButton limitBtn;
     private final JButton scheduleBtn;
     private static JTextArea outputArea = new JTextArea();
-    static String host = "_applianceoptimation._tcp.local.";
+    static String host = "_applianceoptimization._tcp.local.";//host DNS Address
 	static int port;
     static String resolvedIP;
-    static ArrayList<String> appliances = new ArrayList<>();
+    static ArrayList<String> appliances = new ArrayList<>();//Arraylist that stores applianceIDs
 
+    //Declaring the stubs
     private static ApplicationOptimizationBlockingStub blockingStub;
     private static ApplicationOptimizationStub asyncStub;
     
     
     
 
-    public ClientGUI() {
+    public ApplianceOptimizationClientGUI() {
 
         super("Appliance Optimization Client");
 
@@ -51,6 +52,8 @@ public class ClientGUI extends JFrame {
         title = new JLabel("Appliance Optimization Client");
         title.setFont(new Font("Arial", Font.BOLD, 20));
 
+        
+        //Initializing the buttons for the 3 methods
         modeBtn = new JButton("Set Appliance Mode");
         limitBtn = new JButton("Set Appliance Limit");
         scheduleBtn = new JButton("Set Appliance Schedule");
@@ -60,11 +63,13 @@ public class ClientGUI extends JFrame {
         JScrollPane scrollPane = new JScrollPane(outputArea);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
-        // Add GUI components to JFrame
+        // Adding GUI components to JFrame
         Container contentPane = getContentPane();
         contentPane.setLayout(new BorderLayout());
         contentPane.add(title, BorderLayout.NORTH);
 
+        
+        //Creating and defining a Panel and Adding the buttons
         JPanel btnPanel = new JPanel();
         btnPanel.setLayout(new GridLayout(3, 1));
         btnPanel.add(modeBtn);
@@ -74,15 +79,25 @@ public class ClientGUI extends JFrame {
 
         contentPane.add(scrollPane, BorderLayout.CENTER);
 
-        // Set up stubs
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 50058).usePlaintext().build();
-        blockingStub = ApplianceOptimizationGrpc.newBlockingStub(channel);
-        asyncStub = ApplianceOptimizationGrpc.newStub(channel);
-        // Add listeners to buttons
+        
+      //method call to resolve and retrieve the IP Address and Port number
+        testClientJMDNS();
+        
+        
+        
+        
+        
+        
+        // Adding listeners to buttons
         modeBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setApplianceMode();
+            	//calling the set Appliance mode Method when button is clicked
+            	// Setting up the stubs
+                ManagedChannel channel = ManagedChannelBuilder.forAddress(resolvedIP, port).usePlaintext().build();
+                blockingStub = ApplianceOptimizationGrpc.newBlockingStub(channel);
+                asyncStub = ApplianceOptimizationGrpc.newStub(channel);
+                setApplianceMode(); 
                 channel.shutdown();
             }
         });
@@ -90,6 +105,11 @@ public class ClientGUI extends JFrame {
         limitBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+            	// Setting up the stubs
+                ManagedChannel channel = ManagedChannelBuilder.forAddress(resolvedIP, port).usePlaintext().build();
+                blockingStub = ApplianceOptimizationGrpc.newBlockingStub(channel);
+                asyncStub = ApplianceOptimizationGrpc.newStub(channel);
+            	//calling the set Appliance limit Method when button is clicked
                 setApplianceLimit();
                 channel.shutdown();
             }
@@ -98,37 +118,51 @@ public class ClientGUI extends JFrame {
         scheduleBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+            	
+            	// Setting up the stubs
+                ManagedChannel channel = ManagedChannelBuilder.forAddress(resolvedIP, port).usePlaintext().build();
+                blockingStub = ApplianceOptimizationGrpc.newBlockingStub(channel);
+                asyncStub = ApplianceOptimizationGrpc.newStub(channel);
+                
+            	//calling the set Appliance Schedule Method when button is clicked
                 setApplianceSchedule();
                 channel.shutdown();
             }
         });
 
-        // Set JFrame properties
+        // Setting JFrame properties
         setSize(600, 500);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
     
+    
+    //Main Method
     public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 
 		//starting the interface
-    	ClientGUI gui = new ClientGUI();
+    	ApplianceOptimizationClientGUI gui = new ApplianceOptimizationClientGUI();
     	gui.frame.setVisible(true);
 					
 
 	}
-	// Method to update output area of the USer Interface with text
+	// Method to update output area of the User Interface with text
     static void updateOutput(String text) {
         outputArea.append(text + "\n");
         outputArea.setCaretPosition(outputArea.getDocument().getLength());
     }
 
-    // Unary RPC to set appliance mode
+    //Defining the Unary RPC method to set appliance mode
     static void setApplianceMode() {
-    	String applianceId ="";
-    	String location = "";
+    	String applianceId ="";//initializing appliance id
+    	String location = "";//initializing location
+    	
+    	/*Input request for applianceID with Invalid Entry Error handling
+    	 * 
+    	 */
+    	
     	do {   	
     		applianceId = JOptionPane.showInputDialog("Enter Appliance ID:");
 			try{
@@ -139,9 +173,16 @@ public class ClientGUI extends JFrame {
 			    JOptionPane.showMessageDialog(null, e.getMessage());//print error message
 			}
 		}while(applianceId.length()==0);
+    	
+    	
+    	//A drop down list to choose the mode
         String[] choices = { "ECO", "ENERGY SAVING", "ON", "OFF"};
         String mode = (String) JOptionPane.showInputDialog(null, "Choose Mode...",
             "", JOptionPane.QUESTION_MESSAGE, null, choices,choices[0]);
+        
+        /*Input request for Location with Invalid Entry Error handling
+    	 * 
+    	 */
         do {
         location = JOptionPane.showInputDialog("Enter Location:");
         try {
@@ -154,20 +195,26 @@ public class ClientGUI extends JFrame {
 			}
 		}while(location.length()==0);
 
+        
+        //Sending request to server
         SetApplianceModeRequest req = SetApplianceModeRequest.newBuilder()
                 .setApplianceId(applianceId)
                 .setMode(mode)
                 .setLocation(location)
                 .build();
 
+        //Receiving response from the server
         SetApplianceModeResponse response = blockingStub.setApplianceMode(req);
 
         updateOutput("Status: " + response.getStatus() + "\nMessage: " + response.getMessage());
     }
 
-    // Unary RPC to set appliance limit
+    //Defining the Unary RPC method to set appliance limit
     static void setApplianceLimit() {
-    	String applianceId = "";
+    	String applianceId = "";//initializing application Id
+    	
+    	
+    	//Input request for applianceID with Invalid Entry Error handling
         do{
         	applianceId = JOptionPane.showInputDialog("Enter Appliance ID:");
         	try {
@@ -179,6 +226,8 @@ public class ClientGUI extends JFrame {
         		JOptionPane.showMessageDialog(null, e.getMessage());
         	}
         }while(applianceId.length()==0);
+        
+        //Input Request for limit
         String limitString = JOptionPane.showInputDialog("Enter Limit in Kwh:");
         
         try {
@@ -192,12 +241,15 @@ public class ClientGUI extends JFrame {
         }
            
     }
+    
+    
+  //Defining the Bidirectional RPC method to set Appliance schedule
     static void setApplianceSchedule() {
 		// TODO Auto-generated method stub
-    	ArrayList<Long> startTimes = new ArrayList<>();
-    	ArrayList<Long> endTimes = new ArrayList<>();
-    	int pointer = 1;
-    	int result;
+    	//ArrayList<Long> startTimes = new ArrayList<>();
+    	//ArrayList<Long> endTimes = new ArrayList<>();
+    	int pointer = 1;//variable to identical number of appliance entries
+    	int result;//variable that holds the choice after adding an appliance
     	String applianceId;
     	do
     		{
@@ -210,11 +262,12 @@ public class ClientGUI extends JFrame {
 		}catch (InvalidEntryException e) {
 			    JOptionPane.showMessageDialog(null, e.getMessage());//print error message
 			}
-		}while(applianceId.length()==0);
+		}while(applianceId.length()==0);//repeat applianceId input request if ID not given
 			appliances.add(applianceId);
 			pointer++;
-			String[] options = {"Add New Appliance", "Proceed"};
+			String[] options = {"Add New Appliance", "Proceed"};//options for the selection buttons
 
+			//variable for choice of selection buttons
 	        result = JOptionPane.showOptionDialog(
 	                null,
 	                "Do you wish to add another Appliance:",
@@ -223,10 +276,12 @@ public class ClientGUI extends JFrame {
 	                JOptionPane.INFORMATION_MESSAGE,
 	                null,
 	                options,
-	                options[0]);
+	                null);
 			
-    	} while(result==0);    	
+    	} while(result==0);//while loop performs if choice is Add New Appliance    	
 			
+    	
+    	//stream response from server
 		StreamObserver<SetApplianceScheduleResponse> responseObserver = new StreamObserver<SetApplianceScheduleResponse>() {
 			@Override
 			public void onNext(SetApplianceScheduleResponse value) {
@@ -251,14 +306,15 @@ public class ClientGUI extends JFrame {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		//stream request to server
 		StreamObserver<SetApplianceScheduleRequest> requestObserver = asyncStub.setApplianceSchedule(responseObserver);
 		try {
 			int count = 0;
 			do {
-			updateOutput(appliances.get(count));
 			requestObserver.onNext(SetApplianceScheduleRequest.newBuilder().setApplianceId(appliances.get(count)).setStartTime(10000).setEndTime(200000).build());
 			count++;
-			} while(count<appliances.size());
+			} while(count<appliances.size());//
 			
 			// Mark the end of requests
 			requestObserver.onCompleted();
@@ -275,6 +331,7 @@ public class ClientGUI extends JFrame {
 		}
     }
 
+    //Service Listener that derives IP and Port number based on the DNS Address
     private static class SampleListener implements ServiceListener {
 		public void serviceAdded(ServiceEvent event) {
 			System.out.println("Service added: " + event.getInfo());
@@ -293,6 +350,7 @@ public class ClientGUI extends JFrame {
 		}
 	}
 	
+    //Creating and adding the service using JMDNS
 	public static void testClientJMDNS() {
 		try {
 			// Create a JmDNS instance
