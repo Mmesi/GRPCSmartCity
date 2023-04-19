@@ -248,7 +248,7 @@ public class ApplianceOptimizationClientGUI extends JFrame {
 		// TODO Auto-generated method stub
     	//ArrayList<Long> startTimes = new ArrayList<>();
     	//ArrayList<Long> endTimes = new ArrayList<>();
-    	int pointer = 1;//variable to identical number of appliance entries
+    	int pointer = 1;//variable to identify number of appliance entries
     	int result;//variable that holds the choice after adding an appliance
     	String applianceId;
     	do

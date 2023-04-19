@@ -52,7 +52,9 @@ public class EnergyMonitoringServer extends EnergyMonitoringImplBase{
 		
 	}
 
-	//Definition of the registerService method
+	/*Definition of getProperties Method which gets the service name, type, description and port number
+	 * from the energymonitoring.properties file
+	 */
 private Properties getProperties() {
 	
 	Properties prop = null;		
@@ -78,7 +80,7 @@ private Properties getProperties() {
 	 return prop;
 }
 
-
+//Definition of the registerService method
 private  void registerService(Properties prop) {
 	
 	 try {
@@ -114,48 +116,62 @@ private  void registerService(Properties prop) {
     
 }
 
+//Implementation of the Unary rpc method- getEnergyUsage
 	@Override
 	public void getEnergyUsage(GetEnergyUsageRequest request, StreamObserver<GetEnergyUsageResponse> responseObserver) {
 		final EnergyUsageRepository energyRepository = new EnergyUsageRepository();
 		
+		//Get deviceID, startTime and endTime
 	    String deviceId = request.getDeviceId();
 	    long startTimeMillis = request.getStartTime();
 	    long endTimeMillis = request.getEndTime();
+	    
+	    //Read data from a repository given the deviceID, startTime, and endTime 
 	    List<EnergyUsage> energyUsageList = energyRepository.getEnergyUsage(deviceId, startTimeMillis, endTimeMillis);
 
+	    //Initializing totalEnergyUsage  
 	    float totalEnergyUsage = 0.0f;
-	    float totalPowerConsumption = 0.0f;
+	   
 
 	    for (EnergyUsage energyUsage : energyUsageList) {
-	        totalEnergyUsage += energyUsage.getUsage();
-	        totalPowerConsumption += energyUsage.getPowerConsumption();
+	        totalEnergyUsage += energyUsage.getUsage();//calculating the total energy usage
 	        }
+	    //calculating the average power consumption
+	    float averagePowerConsumption = totalEnergyUsage / energyUsageList.size();
 
-	    float averagePowerConsumption = totalPowerConsumption / energyUsageList.size();
-
+	    //Generating the response to be sent to the client
 	    GetEnergyUsageResponse response = GetEnergyUsageResponse.newBuilder().setTotalEnergyUsage(totalEnergyUsage).setAveragePowerConsumption(averagePowerConsumption).build();
 
 	    responseObserver.onNext(response);
 	    responseObserver.onCompleted();
 	}
 
+	//Implementation of the Server Streaming rpc method- getEnergyUsageBySource
 	@Override
 	public void getEnergyUsageBySource(UsageBySourceRequest request,
 			StreamObserver<UsageBySourceResponse> responseObserver) {
-		        long startTime = request.getStartTime();
-		        long endTime = request.getEndTime();
-		        String source_id = request.getSourceId();
+		
+		        long startTime = request.getStartTime();//getting startTime from the request
+		        long endTime = request.getEndTime();//getting endTime from the request
+		        String source_id = request.getSourceId();//getting a sourceId from the request
 
-		        // In this implementation, we simulate energy usage data
+		        // In this implementation, the energy usage data is simulated
 		        // for the given source and time range, and stream the results back
 		        long interval = 60; // seconds
 		        long currentTime = startTime;
+		        
+		        //Getting the energyUsage from the specified startTime to the endTime
 		        while (currentTime < endTime) {
+		        	
+		        
 		            float energyUsage = EnergyUsage(source_id, currentTime, currentTime + interval);
+		            
+		            //generating the response sent back to client
 		            UsageBySourceResponse response = UsageBySourceResponse.newBuilder()
 		                    .setEnergyUsage(energyUsage)
 		                    .build();
 		            responseObserver.onNext(response);
+		            //increase current time bt interval
 		            currentTime += interval;
 		            try {
 						//wait for a second
@@ -168,7 +184,7 @@ private  void registerService(Properties prop) {
 
 		        responseObserver.onCompleted();
 		    }
-
+//This method is a simulation that returns a random number for the energy usage
 		    private float EnergyUsage(String sourceId, long startTime, long endTime) {
 		        
 		        return (float) Math.random() * 100;
@@ -179,14 +195,16 @@ private  void registerService(Properties prop) {
 		
 
 @Override
+	//Implementation of the Server Streaming rpc Method- getEnergyUsageHistory
 	public void getEnergyUsageHistory(GetEnergyUsageHistoryRequest request,
 			StreamObserver<EnergyUsageHistoryData> responseObserver) {
 		
 		final EnergyUsageRepository energyRepository = new EnergyUsageRepository();
+		  //Calling a method in the EnergyUsageRepository class that returns usage History Data.
 	        List<EnergyUsageHistoryData> energyUsageHistoryDataList = energyRepository.getEnergyUsageHistory(request.getDeviceId());
 
 	        for (EnergyUsageHistoryData e : energyUsageHistoryDataList) {
-	            responseObserver.onNext(e);
+	            responseObserver.onNext(e);//returning the result to the client
 	        }
 	        responseObserver.onCompleted();
 	    }

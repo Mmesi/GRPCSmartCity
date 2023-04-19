@@ -53,7 +53,7 @@ public class LightingSystemServer extends LightingSystemImplBase{
 	}
 	
 	/*Definition of getProperties Method which gets the service name, type, description and port number
-	 * from the lightingsystem properties file
+	 * from the lightingsystem.properties file
 	 */
 private Properties getProperties() {
 		
@@ -158,9 +158,7 @@ private Properties getProperties() {
 	//Method that sets the light levels for a given system with a given intensity.
 	//This is just a simulation
 	private boolean setLightLevelsLogic(String systemId, float intensity){
-		
-		System.out.println("Light Level" + systemId +" to be set to an intensity of" + intensity);
-		
+			
 		return true;
 	}
 	

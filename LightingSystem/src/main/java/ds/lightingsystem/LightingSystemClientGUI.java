@@ -8,7 +8,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.InetAddress;
-
+import java.util.ArrayList;
 
 import javax.jmdns.JmDNS;
 import javax.jmdns.ServiceEvent;
@@ -22,7 +22,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-import ds.lightingsystem.ClientGUI;
+import ds.lightingsystem.InvalidEntryException;
+import ds.lightingsystem.LightingSystemClientGUI;
 import ds.lightingsystem.LightingSystemGrpc;
 import ds.lightingsystem.LightingSystemGrpc.LightingSystemBlockingStub;
 import ds.lightingsystem.LightingSystemGrpc.LightingSystemStub;
@@ -30,8 +31,12 @@ import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
 
-public class ClientGUI extends JFrame {
+public class LightingSystemClientGUI extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//Declaring Variables
 	JFrame frame = new JFrame();
     private final JLabel title;
@@ -46,10 +51,16 @@ public class ClientGUI extends JFrame {
     private static LightingSystemBlockingStub blockingStub;
     private static LightingSystemStub asyncStub;
     
+    static ArrayList<String> systems = new ArrayList<>();//Arraylist that stores deviceIDs
+    static ArrayList<Integer> intensities = new ArrayList<>();//arraylist that stores intensity levels
+    static ArrayList<String> systemschedules = new ArrayList<>();
+    static ArrayList<Long> startTimes = new ArrayList<>();
+    static ArrayList<Long> endTimes = new ArrayList<>();
+    static ArrayList<Integer> intensityschedule = new ArrayList<>();
     
     
 
-    public ClientGUI() {
+    public LightingSystemClientGUI() {
 
         super("Light System Client");
 
@@ -135,12 +146,12 @@ public class ClientGUI extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
-    
+    //Main Method
     public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		
-    	ClientGUI gui = new ClientGUI();
+    	//Starting the Interface
+    	LightingSystemClientGUI gui = new LightingSystemClientGUI();
     	gui.frame.setVisible(true);
 					
 
@@ -150,9 +161,64 @@ public class ClientGUI extends JFrame {
         outputArea.append(text + "\n");
         outputArea.setCaretPosition(outputArea.getDocument().getLength());
     }
+    
+    //Method call for setLightLevels from the server
     private void setLightLevels() {
-    	StreamObserver<SetLightLevelsResponse> responseObserver = new StreamObserver<SetLightLevelsResponse>() {
+    	
+    		int pointer = 1;//variable to identify number of system2 entries
+        	int result;//variable that holds the choice after adding a system
+        	String systemId="";
+        	int intensity;//variable that carries the intensity value
+        	
+        	//do while loop performs if option selected is "Add another System"
+        	do
+        		{
+        		//do while performs if no system id id entered
+        		do {   	
+        		systemId = JOptionPane.showInputDialog("Enter ID for System " + pointer+ ":");
+    			try{//check if any ID is entered
+    				if(systemId.length() == 0){
+    					throw new InvalidEntryException();//if device Id is not given
+    			}
+    		}catch (InvalidEntryException e) {
+    			    JOptionPane.showMessageDialog(null, e.getMessage());//print error message
+    			}
+    		}while(systemId.length()==0);//repeat systemId input request if ID not given
+    			systems.add(systemId);//add systemId to the arraylist
+    			
+    			
+    			//do while performs if an invalid entry is made for the intensity
+    			do {
+    				intensity=-1;//initialize intensity to -1
+    				try{//check if the entry for intensity is valid
+    					
+    					intensity = Integer.parseInt(JOptionPane.showInputDialog("Enter a number for Level of Intensity for System "+pointer));
+    				}
+    				catch(NumberFormatException e) {
+    					JOptionPane.showMessageDialog(null,"Invalid Entry for Intensity");
+    				}
+    				
+    			}while(!(intensity>=0));
+    			intensities.add(intensity);//add intensity to the arraylist 
+    			pointer++;//increase pointer
+    			String[] options = {"Add New Device", "Proceed"};//options for the selection buttons
 
+    			//variable for choice of selection buttons
+    	        result = JOptionPane.showOptionDialog(
+    	                null,
+    	                "Do you wish to add another Device:",
+    	                "Selection Option",
+    	                JOptionPane.DEFAULT_OPTION,
+    	                JOptionPane.INFORMATION_MESSAGE,
+    	                null,
+    	                options,
+    	                null);
+    			
+        	} while(result==0);//while loop performs if choice is Add New Appliance    	
+    		
+        	
+        	//generate response from server
+        	StreamObserver<SetLightLevelsResponse> responseObserver = new StreamObserver<SetLightLevelsResponse>() {
     		@Override
     		public void onNext(SetLightLevelsResponse response) {
     			updateOutput("Status: " + response.getStatus());
@@ -171,39 +237,15 @@ public class ClientGUI extends JFrame {
 
     	};
 
-
+    	//Stream request to the server
     	StreamObserver<SetLightLevelsRequest> requestObserver = asyncStub.setLightLevels(responseObserver);
     	try {
-    		requestObserver.onNext(SetLightLevelsRequest.newBuilder().setSystemId("L12").setIntensity(10).build());
+    		int count = 0;
+    		do{//retrieve system IDs and intensity levels from arraylist to be sent to server
+    			requestObserver.onNext(SetLightLevelsRequest.newBuilder().setSystemId(systems.get(count)).setIntensity(intensities.get(count)).build()); 		
     		Thread.sleep(500);
-
-    		requestObserver.onNext(SetLightLevelsRequest.newBuilder().setSystemId("L31").setIntensity(11).build());
-    		Thread.sleep(500);
-
-    		requestObserver.onNext(SetLightLevelsRequest.newBuilder().setSystemId("L45").setIntensity(12).build());
-    		Thread.sleep(500);
-
-    		requestObserver.onNext(SetLightLevelsRequest.newBuilder().setSystemId("L32").setIntensity(13).build());
-    		Thread.sleep(500);
-
-    		requestObserver.onNext(SetLightLevelsRequest.newBuilder().setSystemId("L80").setIntensity(14).build());
-    		Thread.sleep(500);
-
-    		requestObserver.onNext(SetLightLevelsRequest.newBuilder().setSystemId("L21").setIntensity(41).build());
-    		Thread.sleep(500);
-
-    		requestObserver.onNext(SetLightLevelsRequest.newBuilder().setSystemId("L43").setIntensity(13).build());
-    		Thread.sleep(500);
-
-    		requestObserver.onNext(SetLightLevelsRequest.newBuilder().setSystemId("L54").setIntensity(11).build());
-    		Thread.sleep(500);
-
-    		requestObserver.onNext(SetLightLevelsRequest.newBuilder().setSystemId("L12").setIntensity(1).build());
-    		Thread.sleep(500);
-
-    		requestObserver.onNext(SetLightLevelsRequest.newBuilder().setSystemId("L12").setIntensity(13).build());
-    		Thread.sleep(500);
-
+    		count++;
+    		}while(count<systems.size());
 
     		// Mark the end of requests
     		requestObserver.onCompleted();
@@ -218,24 +260,44 @@ public class ClientGUI extends JFrame {
     	}
 		
 	}
+    
+    
+    //Method call to switch light off or on
     private static void switchLight() {
-		// TODO Auto-generated method stub
-    	String[] choices = { "ON", "OFF"};
-        String mode= (String) JOptionPane.showInputDialog(null, "Turn Light:\\n 1. On\\n 2. Off",
+   
+		
+    	String[] choices = { "ON", "OFF"};//choice to turn light on or off
+    	String lightId="";//variable that stores the light IDs
+    	
+    	do{//repeat if the ID is empty
+        	lightId = JOptionPane.showInputDialog(null,"Enter Light ID");
+        	try {
+        		if(lightId.length()==0) {
+        			throw new InvalidEntryException();
+        		}
+        	}
+        	catch(InvalidEntryException e){
+        		JOptionPane.showMessageDialog(null, e.getMessage());
+        	}
+        }while(lightId.length()==0);
+    	//drop down list
+        String mode= (String) JOptionPane.showInputDialog(null, "Turn Light: On or Off",
             "", JOptionPane.QUESTION_MESSAGE, null, choices,choices[0]);
     	
-        String lightId = JOptionPane.showInputDialog(null,"Enter Light ID");
+        
 
 		boolean status = false;
 		if(mode.equals("ON")) {
-			status = true;
+			status = true;//set status to true if mode choice is ON
 		}
 		
+		//send request to Server
 		SwitchLightRequest request = SwitchLightRequest.newBuilder()
                 .setLightId(lightId)
                 .setStatus(status)
                 .build();
         
+		//retrieve request from Server
         SwitchLightResponse response = blockingStub.switchLight(request);
         
         updateOutput("Status: " + response.getLightState());
@@ -243,10 +305,88 @@ public class ClientGUI extends JFrame {
         
 		
 	}
+    
+    //Method call for setLightSchedule
     private void setLightSchedule() {
-		// TODO Auto-generated method stub
+    	String systemId = "";
+    	int pointer = 1;
+    	int result;
+    	int intensity;
+    	long startTime = 0;
+    	long endTime = 0;
+    	do
+		{
+		do {   	
+		systemId = JOptionPane.showInputDialog("Enter ID for System " + pointer+ ":");
+		try{
+			if(systemId.length() == 0){
+				throw new InvalidEntryException();//if system name is not given
+		}
+	}catch (InvalidEntryException e) {
+		    JOptionPane.showMessageDialog(null, e.getMessage());//print error message
+		}
+	}while(systemId.length()==0);//repeat systemId input request if ID not given
+		systemschedules.add(systemId);
+		do {
+			startTime= -1;//initialize startTime to -1
+			try{//check if the entry for intensity is valid
+				
+				startTime = Long.parseLong(JOptionPane.showInputDialog("Enter a Start Time for System "+pointer));
+			}
+			catch(NumberFormatException e) {
+				JOptionPane.showMessageDialog(null,"Invalid Entry for Start Time");
+			}
+			
+		}while(!(startTime>=0));
+		startTimes.add(startTime);//add startTime to arraylist
+		
+		do {
+			endTime=-1;//initialize endtime  to -1
+			try{//check if the entry for intensity is valid
+				
+				endTime = Integer.parseInt(JOptionPane.showInputDialog("Enter an End Time for System "+pointer));
+			}
+			catch(NumberFormatException e) {
+				JOptionPane.showMessageDialog(null,"Invalid Entry for End Time");
+			}
+			
+		}while(!(endTime>=0));
+		endTimes.add(endTime);//add endTime to arraylist
+		
+		do {
+			intensity=-1;//initialize intensity to -1
+			try{//check if the entry for intensity is valid
+				
+				intensity = Integer.parseInt(JOptionPane.showInputDialog("Enter a number for Level of Intensity for System "+pointer));
+			}
+			catch(NumberFormatException e) {
+				JOptionPane.showMessageDialog(null,"Invalid Entry for Intensity");
+			}
+			
+		}while(!(intensity>=0));
+		intensityschedule.add(intensity);
+		pointer++;
+		String[] options = {"Add New Appliance", "Proceed"};//options for the selection buttons
+
+		//variable for choice of selection buttons
+        result = JOptionPane.showOptionDialog(
+                null,
+                "Do you wish to add another System:",
+                "Selection Option",
+                JOptionPane.DEFAULT_OPTION,
+                JOptionPane.INFORMATION_MESSAGE,
+                null,
+                options,
+                null);
+		
+	} while(result==0);//while loop performs if choice is Add New Appliance
+		
+    	
+    	//Initiating response from server
     	StreamObserver<SetLightScheduleResponse> responseObserver = new StreamObserver<SetLightScheduleResponse>() {
 
+    		
+    		//Get Status and message 
 			@Override
 			public void onNext(SetLightScheduleResponse response) {
 				updateOutput("Status: " + response.getStatus());
@@ -264,25 +404,21 @@ public class ClientGUI extends JFrame {
 			}
 
 		};
+		
+	//Stream request to Server
 	StreamObserver<SetLightScheduleRequest> requestObserver = asyncStub.setLightSchedule(responseObserver);
 	try {
-		requestObserver.onNext(SetLightScheduleRequest.newBuilder().setSystemId("L12").setStartTime(174233).setEndTime(182322).setIntensity(10).build());
-		Thread.sleep(500);
-
-		requestObserver.onNext(SetLightScheduleRequest.newBuilder().setSystemId("L31").setStartTime(174233).setEndTime(182322).setIntensity(11).build());
-		Thread.sleep(500);
-
-		requestObserver.onNext(SetLightScheduleRequest.newBuilder().setSystemId("L45").setStartTime(174233).setEndTime(182322).setIntensity(12).build());
-		Thread.sleep(500);
-
-		requestObserver.onNext(SetLightScheduleRequest.newBuilder().setSystemId("L32").setStartTime(174233).setEndTime(182322).setIntensity(13).build());
-		Thread.sleep(500);
-
-		requestObserver.onNext(SetLightScheduleRequest.newBuilder().setSystemId("L80").setStartTime(174233).setEndTime(182322).setIntensity(14).build());
-		Thread.sleep(500);
+		int count = 0;//this is used to get the entries in all the arrays
 		
+		do {//loop that retrieves all the entries in the arraylists and sends requests
+		requestObserver.onNext(SetLightScheduleRequest.newBuilder().setSystemId(systemschedules.get(count)).setStartTime(startTimes.get(count)).setEndTime(endTimes.get(count)).setIntensity(intensityschedule.get(count)).build());
+		Thread.sleep(500);
+		count++;
+		}while(count<systemschedules.size());
+
 		
-requestObserver.onCompleted();
+	//Stream completed	
+     requestObserver.onCompleted();
 
 		
 		Thread.sleep(5000);
@@ -296,7 +432,7 @@ requestObserver.onCompleted();
 		
 	}
 
-    
+    //Service Listener that derives IP and Port number based on the DNS Address
     private static class SampleListener implements ServiceListener {
 		public void serviceAdded(ServiceEvent event) {
 			System.out.println("Service added: " + event.getInfo());
@@ -314,7 +450,9 @@ requestObserver.onCompleted();
                     System.out.println("IP Resolved - " + resolvedIP + ":" + port);
 		}
 	}
-	
+    
+    
+  //Creating and adding the service using JMDNS
 	public static void testClientJMDNS() {
 		try {
 			// Create a JmDNS instance

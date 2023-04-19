@@ -28,7 +28,7 @@ public class ApplianceOptimizationServer extends ApplicationOptimizationImplBase
 		AOserver.registerService(prop);
 		
 		
-		//retrieve the port number 
+		//retrieving the port number 
 		int port = Integer.valueOf( prop.getProperty("service_port"));
 		
 		try {
@@ -48,7 +48,7 @@ public class ApplianceOptimizationServer extends ApplicationOptimizationImplBase
 	}
 
 /*Definition of getProperties Method which gets the service name, type, description and port number
- * from the applianceoptimization properties file
+ * from the applianceoptimization.properties file
  */
 	
 private Properties getProperties() {

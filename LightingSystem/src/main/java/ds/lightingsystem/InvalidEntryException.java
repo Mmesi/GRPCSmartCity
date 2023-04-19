@@ -9,7 +9,5 @@ public class InvalidEntryException extends Exception {
 		super("ID cannot be empty. Please correct this");
 
 }
-	public String getLocationmessage() {
-		return "Please Enter a Location";
-	}
+	
 }
