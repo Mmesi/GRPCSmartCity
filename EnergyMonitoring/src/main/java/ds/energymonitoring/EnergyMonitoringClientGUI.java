@@ -291,6 +291,8 @@ public class EnergyMonitoringClientGUI extends JFrame {
         	}
         }while(deviceId.length()==0);
 			
+       
+        //Sending request to server
     	GetEnergyUsageHistoryRequest request = GetEnergyUsageHistoryRequest.newBuilder()
                 .setDeviceId(deviceId)
                 .build();
