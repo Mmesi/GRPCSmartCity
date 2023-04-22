@@ -53,7 +53,7 @@ public class LightingSystemServer extends LightingSystemImplBase{
 	}
 	
 	/*Definition of getProperties Method which gets the service name, type, description and port number
-	 * from the lightingsystem.properties file
+	 * from the lightingsystem.properties file and also prints it to the screen
 	 */
 private Properties getProperties() {
 		
@@ -86,7 +86,7 @@ private Properties getProperties() {
 		 try {
 	            // Create a JmDNS instance
 	            JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
-	            
+	            System.out.println(InetAddress.getLocalHost());
 	            String service_type = prop.getProperty("service_type") ;//"_http._tcp.local.";
 	            String service_name = prop.getProperty("service_name")  ;// "example";
 	           

@@ -157,7 +157,7 @@ private  void registerService(Properties prop) {
 
 		        // In this implementation, the energy usage data is simulated
 		        // for the given source and time range, and stream the results back
-		        long interval = 60; // seconds
+		        long interval = 3600000; // milliseconds
 		        long currentTime = startTime;
 		        
 		        //Getting the energyUsage from the specified startTime to the endTime
