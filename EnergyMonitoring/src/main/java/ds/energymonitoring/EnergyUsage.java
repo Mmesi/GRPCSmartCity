@@ -7,16 +7,17 @@ public class EnergyUsage {
 	String deviceId;
 	double usage;
 	Timestamp timestamp;
-	public EnergyUsage(String deviceId, double usage, Timestamp timestamp) {
+	
+	public EnergyUsage(String deviceId, double usage) {
 		// TODO Auto-generated constructor stub
 		this.deviceId = deviceId;
 		this.usage = usage;
-		this.timestamp = timestamp;
+		//this.timestamp = timestamp;
 	}
 
-	public float getUsage() {
+	public double getUsage() {
 		// TODO Auto-generated method stub
-		return 0;
+		return usage;
 	}
 
 	public Timestamp getTimestamp() {

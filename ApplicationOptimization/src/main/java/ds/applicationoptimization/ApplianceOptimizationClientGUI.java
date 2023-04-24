@@ -17,7 +17,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.InetAddress;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneOffset;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Random;
 
 public class ApplianceOptimizationClientGUI extends JFrame {
@@ -36,7 +40,8 @@ public class ApplianceOptimizationClientGUI extends JFrame {
 	static int port;
     static String resolvedIP;
     static ArrayList<String> appliances = new ArrayList<>();//Arraylist that stores applianceIDs
-
+    static ArrayList<Long> startTimes = new ArrayList<>();//Arraylist that stores start Times
+    static ArrayList<Long> endTimes = new ArrayList<>();//Arraylist that stores end Time
     //Declaring the stubs
     private static ApplicationOptimizationBlockingStub blockingStub;
     private static ApplicationOptimizationStub asyncStub;
@@ -126,8 +131,15 @@ public class ApplianceOptimizationClientGUI extends JFrame {
                 
             	//calling the set Appliance Schedule Method when button is clicked
                 setApplianceSchedule();
-                channel.shutdown();
+                try {
+					channel.wait(15000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				};
+				 channel.shutdown();
             }
+           
         });
 
         // Setting JFrame properties
@@ -245,11 +257,19 @@ public class ApplianceOptimizationClientGUI extends JFrame {
     
   //Defining the Bidirectional RPC method to set Appliance schedule
     static void setApplianceSchedule() {
-		// TODO Auto-generated method stub
-    	//ArrayList<Long> startTimes = new ArrayList<>();
-    	//ArrayList<Long> endTimes = new ArrayList<>();
+		
+    	
     	int pointer = 1;//variable to identify number of appliance entries
     	int result;//variable that holds the choice after adding an appliance
+    	long startTime = 0;//initializing the startTime
+        long endTime = 0;//Initializing the endTime
+      //Creating an SpinnerDateModel instance of date selection using 
+        SpinnerDateModel dateModel = new SpinnerDateModel();
+        JSpinner dateSpinner = new JSpinner(dateModel);
+        dateSpinner.setEditor(new JSpinner.DateEditor(dateSpinner, "MM/dd/yyyy"));
+        
+      //Creating an instance of the LocalTime with midnight as value
+        LocalTime midnight = LocalTime.of(0, 0, 0);
     	String applianceId;
     	do
     		{
@@ -264,6 +284,36 @@ public class ApplianceOptimizationClientGUI extends JFrame {
 			}
 		}while(applianceId.length()==0);//repeat applianceId input request if ID not given
 			appliances.add(applianceId);
+			do {
+	            Object[] message = {"Date:", dateSpinner};
+	            // Show the JSpinner in a JOptionPane dialog box
+	            int choice = JOptionPane.showConfirmDialog(null, message, "Select a Start Time for "+applianceId, JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+	            
+	            // Handle the user's choice
+	            if (choice == JOptionPane.OK_OPTION) {
+	                // Get the selected date from the JSpinner
+	            	LocalDateTime selectedDate = LocalDateTime.of(((Date)dateSpinner.getValue()).toInstant().atZone(ZoneOffset.systemDefault()).toLocalDate(), midnight);
+	                // Convert the LocalDate to epoch format
+	                startTime = selectedDate.toEpochSecond(ZoneOffset.UTC);
+	                
+	            }
+	            choice = JOptionPane.showConfirmDialog(null, message, "Select an End Time for "+applianceId, JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+	         // Handle the user's choice
+	            if (choice == JOptionPane.OK_OPTION) {
+	                // Get the selected date from the JSpinner
+	                LocalDateTime selectedDate = LocalDateTime.of(((Date)dateSpinner.getValue()).toInstant().atZone(ZoneOffset.systemDefault()).toLocalDate(), midnight);
+	                // Convert the LocalDate to epoch format
+	                endTime = selectedDate.toEpochSecond(ZoneOffset.UTC);
+	            }
+	             
+	            
+	            //if the start time is later than the end time
+	            if(startTime>endTime) {
+	            	JOptionPane.showMessageDialog(null, "Start time cannot be later than End Time");
+	            }
+	            }while(startTime>endTime);//loop if start time is later than the end time
+				startTimes.add(startTime);
+				endTimes.add(endTime);
 			pointer++;
 			String[] options = {"Add New Appliance", "Proceed"};//options for the selection buttons
 
@@ -278,14 +328,15 @@ public class ApplianceOptimizationClientGUI extends JFrame {
 	                options,
 	                null);
 			
-    	} while(result==0);//while loop performs if choice is Add New Appliance    	
+    	} while(result==0);//while loop performs if choice is Add New Appliance
+    	
 			
     	
     	//stream response from server
 		StreamObserver<SetApplianceScheduleResponse> responseObserver = new StreamObserver<SetApplianceScheduleResponse>() {
 			@Override
 			public void onNext(SetApplianceScheduleResponse value) {
-				updateOutput("Message: " + value.getMessage());
+				updateOutput("Message:\n " + value.getMessage());
 			}
 
 			@Override
@@ -312,7 +363,7 @@ public class ApplianceOptimizationClientGUI extends JFrame {
 		try {
 			int count = 0;
 			do {
-			requestObserver.onNext(SetApplianceScheduleRequest.newBuilder().setApplianceId(appliances.get(count)).setStartTime(10000).setEndTime(200000).build());
+			requestObserver.onNext(SetApplianceScheduleRequest.newBuilder().setApplianceId(appliances.get(count)).setStartTime(startTimes.get(count)).setEndTime(endTimes.get(count)).build());
 			count++;
 			} while(count<appliances.size());//
 			

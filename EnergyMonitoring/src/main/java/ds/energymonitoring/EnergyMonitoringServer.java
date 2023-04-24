@@ -1,6 +1,7 @@
 package ds.energymonitoring;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.InetAddress;
@@ -87,13 +88,13 @@ private  void registerService(Properties prop) {
             // Create a JmDNS instance
             JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
             
-            String service_type = prop.getProperty("service_type") ;//"_http._tcp.local.";
-            String service_name = prop.getProperty("service_name")  ;// "example";
+            String service_type = prop.getProperty("service_type") ;
+            String service_name = prop.getProperty("service_name")  ;
            
-            int service_port = Integer.valueOf( prop.getProperty("service_port") );// #.50051;
+            int service_port = Integer.valueOf( prop.getProperty("service_port") );
 
             
-            String service_description_properties = prop.getProperty("service_description")  ;//"path=index.html";
+            String service_description_properties = prop.getProperty("service_description")  ;
             
             // Register a service
             ServiceInfo serviceInfo = ServiceInfo.create(service_type, service_name, service_port, service_description_properties);
@@ -103,9 +104,6 @@ private  void registerService(Properties prop) {
             
             // Wait a bit
             Thread.sleep(1000);
-
-            // Unregister all services
-            //jmdns.unregisterAllServices();
 
         } catch (IOException e) {
             System.out.println(e.getMessage());
@@ -127,7 +125,16 @@ private  void registerService(Properties prop) {
 	    long endTimeMillis = request.getEndTime();
 	    
 	    //Read data from a repository given the deviceID, startTime, and endTime 
-	    List<EnergyUsage> energyUsageList = energyRepository.getEnergyUsage(deviceId, startTimeMillis, endTimeMillis);
+	    List<EnergyUsage> energyUsageList= new ArrayList<>();
+		try {
+			energyUsageList = energyRepository.getEnergyUsage(deviceId, startTimeMillis, endTimeMillis);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	    //Initializing totalEnergyUsage  
 	    float totalEnergyUsage = 0.0f;
@@ -157,7 +164,7 @@ private  void registerService(Properties prop) {
 
 		        // In this implementation, the energy usage data is simulated
 		        // for the given source and time range, and stream the results back
-		        long interval = 3600000; // milliseconds
+		        long interval = 3600000; // interval of an hour
 		        long currentTime = startTime;
 		        
 		        //Getting the energyUsage from the specified startTime to the endTime

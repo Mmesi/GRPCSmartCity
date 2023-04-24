@@ -86,7 +86,7 @@ private Properties getProperties() {
 		 try {
 	            // Create a JmDNS instance
 	            JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
-	            System.out.println(InetAddress.getLocalHost());
+	           
 	            String service_type = prop.getProperty("service_type") ;//"_http._tcp.local.";
 	            String service_name = prop.getProperty("service_name")  ;// "example";
 	           

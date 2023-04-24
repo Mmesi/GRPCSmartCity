@@ -4,9 +4,12 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.InetAddress;
+import java.text.SimpleDateFormat;
 import java.util.Properties;
 import javax.jmdns.JmDNS;
 import javax.jmdns.ServiceInfo;
+
+import java.util.Date;
 
 import ds.applicationoptimization.ApplianceOptimizationGrpc.ApplicationOptimizationImplBase;
 import io.grpc.Server;
@@ -179,17 +182,30 @@ private Properties getProperties() {
 	        	
 	            // Implementing code to set the appliance schedule based on the request parameters
 	        	String applianceId = request.getApplianceId();
-	            int startTime = (int) request.getStartTime();
-	            int endTime = (int) request.getEndTime();
+	            long startTime = request.getStartTime();
+	            long endTime = request.getEndTime();
+	            
+	            //C
+	            Date startTimeDate = new Date(startTime*1000);
+	            Date endTimeDate = new Date(endTime*1000);
+	            
+	            // Create a SimpleDateFormat object with desired date format
+	            SimpleDateFormat startTimedateFormat = new SimpleDateFormat("yyyy/MM/dd");
+	            SimpleDateFormat endTimedateFormat = new SimpleDateFormat("yyyy/MM/dd");
+	            
+	            // Convert Date object to string format
+	            String startTimeString = startTimedateFormat.format(startTimeDate);
+	            String endTimeString = endTimedateFormat.format(endTimeDate);
+	            
 	            
 	            //Print the activity to the console
-	            System.out.println("Setting " + applianceId + " schedule from " + startTime + " to " + endTime + "...");
+	            System.out.println("Setting " + applianceId + " schedule from " + startTimeString + " to " + endTimeString + "...");
 	            
 	            // Append the schedule information to the response message
 	            if (count > -1) {
 	                messageBuilder.append("Appliance schedule for " +applianceId + " set");
 	            }
-	            messageBuilder.append(": from ").append(startTime).append(" to ").append(endTime+"\n");
+	            messageBuilder.append(": from ").append(startTimeString).append(" to ").append(endTimeString+"\n");
 	            count++;
 	        }
 

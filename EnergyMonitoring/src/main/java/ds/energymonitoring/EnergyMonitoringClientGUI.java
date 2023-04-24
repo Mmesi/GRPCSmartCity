@@ -8,8 +8,10 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.InetAddress;
-import java.util.Random;
-
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneOffset;
 import javax.jmdns.JmDNS;
 import javax.jmdns.ServiceEvent;
 import javax.jmdns.ServiceInfo;
@@ -20,9 +22,10 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JSpinner;
 import javax.swing.JTextArea;
-
-import ds.energymonitoring.EnergyMonitoringGrpc;
+import javax.swing.SpinnerDateModel;
+import java.util.Date;
 import ds.energymonitoring.EnergyMonitoringClientGUI;
 import ds.energymonitoring.EnergyMonitoringGrpc.EnergyMonitoringBlockingStub;
 import ds.energymonitoring.EnergyMonitoringGrpc.EnergyMonitoringStub;
@@ -63,7 +66,7 @@ public class EnergyMonitoringClientGUI extends JFrame {
 
         //Adding buttons for the 3 methods
         usageBtn = new JButton("Retrieve Energy Usage");
-        sourceBtn = new JButton("Retrieve Energy Usage by Source(Gas/Electricity");
+        sourceBtn = new JButton("Retrieve Energy Usage by Source (Gas/Electricity)");
         historyBtn = new JButton("Retrieve Energy Usage History Data");
 
         outputArea = new JTextArea(15, 40);
@@ -161,7 +164,7 @@ public class EnergyMonitoringClientGUI extends JFrame {
         
         //Error Handling for wrong input for deviceId 
         do{
-        	deviceId = JOptionPane.showInputDialog("Enter Device ID:");
+        	deviceId = JOptionPane.showInputDialog("Enter Device ID: eg. television, ");
         	try{
         		
         		if(deviceId.length()==0) {
@@ -173,30 +176,47 @@ public class EnergyMonitoringClientGUI extends JFrame {
         	}
         }while(deviceId.length()==0);
         
-        //Reading in the StartTime and EndTime as String
-        String startTimeString = JOptionPane.showInputDialog("Enter Start Time of Energy Usage:");
-        String endTimeString = JOptionPane.showInputDialog("Enter End Time of Energy Usage:");
-        
+             
         
         long startTime = 0;//initializing the startTime
         long endTime = 0;//Initializing the endTime
+      //Creating an instance of the LocalTime with midnight as value
+        LocalTime midnight = LocalTime.of(0, 0, 0);
+        
+        //Creating an SpinnerDateModel instance of date selection using 
+        SpinnerDateModel dateModel = new SpinnerDateModel();
+        JSpinner dateSpinner = new JSpinner(dateModel);
+        dateSpinner.setEditor(new JSpinner.DateEditor(dateSpinner, "MM/dd/yyyy"));
         
         
-        //Error handling to ensure that entries for both startTime and endTime are values
-        try {
-        	startTime = Long.parseLong(startTimeString);
+        do {
+        Object[] message = {"Date:", dateSpinner};
+        // Show the JSpinner in a JOptionPane dialog box
+        int choice = JOptionPane.showConfirmDialog(null, message, "Select a Start Time", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+        
+        // Handle the user's choice
+        if (choice == JOptionPane.OK_OPTION) {
+            // Get the selected date from the JSpinner
+        	LocalDateTime selectedDate = LocalDateTime.of(((Date)dateSpinner.getValue()).toInstant().atZone(ZoneOffset.systemDefault()).toLocalDate(), midnight);
+            // Convert the LocalDate to epoch format
+            startTime = selectedDate.toEpochSecond(ZoneOffset.UTC);
+            
         }
-        catch(NumberFormatException e) {
-        	updateOutput("Invalid input for Start Time.");
-        	return;
+        choice = JOptionPane.showConfirmDialog(null, message, "Select an End Time", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+     // Handle the user's choice
+        if (choice == JOptionPane.OK_OPTION) {
+            // Get the selected date from the JSpinner
+            LocalDateTime selectedDate = LocalDateTime.of(((Date)dateSpinner.getValue()).toInstant().atZone(ZoneOffset.systemDefault()).toLocalDate(), midnight);
+            // Convert the LocalDate to epoch format
+            endTime = selectedDate.toEpochSecond(ZoneOffset.UTC);
         }
-        try {
-        	endTime = Long.parseLong(endTimeString);
+         
+        
+        //if the start time is later than the end time
+        if(startTime>endTime) {
+        	JOptionPane.showMessageDialog(null, "Start time cannot be later than End Time");
         }
-        catch(NumberFormatException e) {
-        	updateOutput("Invalid input for End Time.");
-        	return;
-        }
+        }while(startTime>endTime);//loop if start time is later than the end time
         
         
         //Sending request to the server 
@@ -205,8 +225,14 @@ public class EnergyMonitoringClientGUI extends JFrame {
         //Receiving the response from the server
 		GetEnergyUsageResponse response = blockingStub.getEnergyUsage(req);
 		
+		float totalEnergyUsage = response.getTotalEnergyUsage();
+		
+		if(totalEnergyUsage==0) {
+			updateOutput("No Usage Data Available");
+		}
+		else
 		//Outputting the result to the console
-		 updateOutput("Total Energy Usage: " + response.getTotalEnergyUsage() +  "\n Average for period: " + response.getAveragePowerConsumption());
+		 updateOutput("Total Energy Usage: " + totalEnergyUsage +  "Kwh\n Average for period: " + response.getAveragePowerConsumption()+"Kwh");
 
     }
 
@@ -218,29 +244,48 @@ public class EnergyMonitoringClientGUI extends JFrame {
         String sourceId= (String) JOptionPane.showInputDialog(null, "What Energy Source Data do you wish to Retrieve?",
             "", JOptionPane.QUESTION_MESSAGE, null, choices,choices[0]);
         
-      //Reading in the StartTime and EndTime as String
-    	String startTimeString = JOptionPane.showInputDialog("Enter Start Time: ");
-        String endTimeString = JOptionPane.showInputDialog("Enter End Time: ");
-        
+      
         
         long startTime = 0;//initializing the startTime
         long endTime = 0;//Initializing the endTime
+      //Creating an instance of the LocalTime with midnight as value
+        LocalTime midnight = LocalTime.of(0, 0, 0);
         
-      //Error handling to ensure that entries for both startTime and endTime are values
-        try {
-            startTime = Long.parseLong(startTimeString);           
-    		
-        } catch (NumberFormatException e) {
-            updateOutput("Invalid input for Start Time.");
-            return;
+        //Creating an SpinnerDateModel instance of date selection using 
+        SpinnerDateModel dateModel = new SpinnerDateModel();
+        JSpinner dateSpinner = new JSpinner(dateModel);
+        dateSpinner.setEditor(new JSpinner.DateEditor(dateSpinner, "MM/dd/yyyy"));
+        
+        
+        do {
+        Object[] message = {"Date:", dateSpinner};
+        // Show the JSpinner in a JOptionPane dialog box
+        int choice = JOptionPane.showConfirmDialog(null, message, "Select a Start Time", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+        
+        // Handle the user's choice
+        if (choice == JOptionPane.OK_OPTION) {
+            // Get the selected date from the JSpinner
+        	LocalDateTime selectedDate = LocalDateTime.of(((Date)dateSpinner.getValue()).toInstant().atZone(ZoneOffset.systemDefault()).toLocalDate(), midnight);
+            // Convert the LocalDate to epoch format
+            startTime = selectedDate.toEpochSecond(ZoneOffset.UTC);
+            
         }
-        try {
-            endTime = Long.parseLong(endTimeString);           
-    		
-        } catch (NumberFormatException e) {
-            updateOutput("Invalid input for End Time.");
-            return;
+        choice = JOptionPane.showConfirmDialog(null, message, "Select an End Time", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+     // Handle the user's choice
+        if (choice == JOptionPane.OK_OPTION) {
+            // Get the selected date from the JSpinner
+            LocalDateTime selectedDate = LocalDateTime.of(((Date)dateSpinner.getValue()).toInstant().atZone(ZoneOffset.systemDefault()).toLocalDate(), midnight);
+            // Convert the LocalDate to epoch format
+            endTime = selectedDate.toEpochSecond(ZoneOffset.UTC);
         }
+         
+        
+        //if the start time is later than the end time
+        if(startTime>endTime) {
+        	JOptionPane.showMessageDialog(null, "Start time cannot be later than End Time");
+        }
+        }while(startTime>endTime);//loop if start time is later than the end time
+        
         
         //Sending request to the server
         UsageBySourceRequest req = UsageBySourceRequest.newBuilder().setSourceId(sourceId).setStartTime(startTime).setEndTime(endTime).build();
