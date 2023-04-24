@@ -185,7 +185,7 @@ private Properties getProperties() {
 	            long startTime = request.getStartTime();
 	            long endTime = request.getEndTime();
 	            
-	            //C
+	            //Creating Date instance for start time and end time
 	            Date startTimeDate = new Date(startTime*1000);
 	            Date endTimeDate = new Date(endTime*1000);
 	            
