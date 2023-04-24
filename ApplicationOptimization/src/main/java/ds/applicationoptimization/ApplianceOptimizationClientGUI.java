@@ -23,6 +23,7 @@ import java.time.ZoneOffset;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public class ApplianceOptimizationClientGUI extends JFrame {
 
@@ -131,13 +132,13 @@ public class ApplianceOptimizationClientGUI extends JFrame {
                 
             	//calling the set Appliance Schedule Method when button is clicked
                 setApplianceSchedule();
+                channel.shutdown();
                 try {
-					channel.wait(15000);
+					channel.awaitTermination(10000, TimeUnit.SECONDS);
 				} catch (InterruptedException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
-				};
-				 channel.shutdown();
+				}
             }
            
         });

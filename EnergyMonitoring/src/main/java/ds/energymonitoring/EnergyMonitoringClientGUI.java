@@ -8,6 +8,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.InetAddress;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -164,7 +165,7 @@ public class EnergyMonitoringClientGUI extends JFrame {
         
         //Error Handling for wrong input for deviceId 
         do{
-        	deviceId = JOptionPane.showInputDialog("Enter Device ID: eg. television, ");
+        	deviceId = JOptionPane.showInputDialog("Enter Device ID: eg. television, fan, etc");
         	try{
         		
         		if(deviceId.length()==0) {
@@ -341,14 +342,20 @@ public class EnergyMonitoringClientGUI extends JFrame {
     	GetEnergyUsageHistoryRequest request = GetEnergyUsageHistoryRequest.newBuilder()
                 .setDeviceId(deviceId)
                 .build();
-    	
+    	updateOutput("Available Energy usage Data for "+deviceId+" per year Till: ");
     //Receiving the Stream Response from the Server
 	StreamObserver<EnergyUsageHistoryData> responseObserver = new StreamObserver<EnergyUsageHistoryData>() {
         @Override
+        
         public void onNext(EnergyUsageHistoryData response) {
-        	String date = String.valueOf(response.getDateTime());
-        	updateOutput("Energy usage Data from "+ date + " is " + response.getEnergyUsage() + "kWh");
-        }
+        	
+        	Long dateMiilis = response.getDateTime();
+        	Date date = new Date(dateMiilis);
+        	SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss");
+        	String dateString = dateFormat.format(date);
+        	
+        	updateOutput(" "+dateString + " is " + response.getEnergyUsage() + "kWh");
+        	}
 
         @Override
         //Error Handling

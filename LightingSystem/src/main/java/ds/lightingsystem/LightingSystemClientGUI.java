@@ -8,7 +8,11 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.InetAddress;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneOffset;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.jmdns.JmDNS;
 import javax.jmdns.ServiceEvent;
@@ -20,7 +24,9 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JSpinner;
 import javax.swing.JTextArea;
+import javax.swing.SpinnerDateModel;
 
 import ds.lightingsystem.InvalidEntryException;
 import ds.lightingsystem.LightingSystemClientGUI;
@@ -313,7 +319,15 @@ public class LightingSystemClientGUI extends JFrame {
     	int result;
     	int intensity;
     	long startTime = 0;
-    	long endTime = 0;
+    	long endTime = 0;//Initializing the endTime
+    	
+        //Creating an SpinnerDateModel instance of date selection using 
+          SpinnerDateModel dateModel = new SpinnerDateModel();
+          JSpinner dateSpinner = new JSpinner(dateModel);
+          dateSpinner.setEditor(new JSpinner.DateEditor(dateSpinner, "MM/dd/yyyy"));
+          
+        //Creating an instance of the LocalTime with midnight as value
+          LocalTime midnight = LocalTime.of(0, 0, 0);
     	do
 		{
 		do {   	
@@ -328,31 +342,35 @@ public class LightingSystemClientGUI extends JFrame {
 	}while(systemId.length()==0);//repeat systemId input request if ID not given
 		systemschedules.add(systemId);
 		do {
-			startTime= -1;//initialize startTime to -1
-			try{//check if the entry for intensity is valid
-				
-				startTime = Long.parseLong(JOptionPane.showInputDialog("Enter a Start Time for System "+pointer));
-			}
-			catch(NumberFormatException e) {
-				JOptionPane.showMessageDialog(null,"Invalid Entry for Start Time");
-			}
-			
-		}while(!(startTime>=0));
-		startTimes.add(startTime);//add startTime to arraylist
-		
-		do {
-			endTime=-1;//initialize endtime  to -1
-			try{//check if the entry for intensity is valid
-				
-				endTime = Integer.parseInt(JOptionPane.showInputDialog("Enter an End Time for System "+pointer));
-			}
-			catch(NumberFormatException e) {
-				JOptionPane.showMessageDialog(null,"Invalid Entry for End Time");
-			}
-			
-		}while(!(endTime>=0));
-		endTimes.add(endTime);//add endTime to arraylist
-		
+            Object[] message = {"Date:", dateSpinner};
+            // Show the JSpinner in a JOptionPane dialog box
+            int choice = JOptionPane.showConfirmDialog(null, message, "Select a Start Time for "+systemId, JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+            
+            // Handle the user's choice
+            if (choice == JOptionPane.OK_OPTION) {
+                // Get the selected date from the JSpinner
+            	LocalDateTime selectedDate = LocalDateTime.of(((Date)dateSpinner.getValue()).toInstant().atZone(ZoneOffset.systemDefault()).toLocalDate(), midnight);
+                // Convert the LocalDate to epoch format
+                startTime = selectedDate.toEpochSecond(ZoneOffset.UTC);
+                
+            }
+            choice = JOptionPane.showConfirmDialog(null, message, "Select an End Time for "+systemId, JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+         // Handle the user's choice
+            if (choice == JOptionPane.OK_OPTION) {
+                // Get the selected date from the JSpinner
+                LocalDateTime selectedDate = LocalDateTime.of(((Date)dateSpinner.getValue()).toInstant().atZone(ZoneOffset.systemDefault()).toLocalDate(), midnight);
+                // Convert the LocalDate to epoch format
+                endTime = selectedDate.toEpochSecond(ZoneOffset.UTC);
+            }
+             
+            
+            //if the start time is later than the end time
+            if(startTime>endTime) {
+            	JOptionPane.showMessageDialog(null, "Start time cannot be later than End Time");
+            }
+            }while(startTime>endTime);//loop if start time is later than the end time
+			startTimes.add(startTime);
+			endTimes.add(endTime);
 		do {
 			intensity=-1;//initialize intensity to -1
 			try{//check if the entry for intensity is valid
